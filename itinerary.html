@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malacca & Port Dickson Family Trip — June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF5EB;
+    --card: #FFFFFF;
+    --forest: #1A3C28;
+    --amber: #C85D16;
+    --sky: #1575A8;
+    --teal: #0B7A6A;
+    --gold: #D49010;
+    --purple: #6B3FA0;
+    --red: #BE2E2E;
+    --green: #1E8449;
+    --text: #231806;
+    --muted: #7A6B55;
+    --border: #E0D4BE;
+    --shadow: 0 2px 16px rgba(26,60,40,0.09);
+    /* legacy aliases used by coloured inline elements */
+    --blue: #1575A8;
+    --orange: #C85D16;
+    --teal2: #17808a;
+  }
+  /* ── BASE ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background: var(--bg); color: var(--text);
+    font-size: 15px; line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+  * { -webkit-tap-highlight-color: transparent; }
+  a { color: var(--sky); text-decoration: none; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(150deg, #1A3C28 0%, #0B5C3A 45%, #0B7A6A 100%);
+    color: #fff; padding: 44px 20px 32px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(212,144,16,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px; font-weight: 700; margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .hero .sub { font-size: 13px; opacity: 0.85; margin-bottom: 20px; position: relative; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; position: relative; }
+  .pill {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px; padding: 4px 13px; font-size: 12px; font-weight: 600;
+  }
+
+  /* ── ALERT ── */
+  .alert-urgent {
+    background: #fffbeb; border-left: 5px solid var(--amber);
+    padding: 14px 18px; margin: 16px 16px 0;
+    border-radius: 0 8px 8px 0; box-shadow: var(--shadow);
+  }
+  .alert-urgent strong { color: var(--red); }
+  .alert-urgent ul { margin: 7px 0 0 18px; }
+  .alert-urgent li { margin-bottom: 4px; font-size: 13px; }
+
+  /* ── NAV ── */
+  .nav-tabs {
+    display: flex; gap: 6px; padding: 10px 16px;
+    background: var(--forest); position: sticky; top: 0; z-index: 99;
+    overflow-x: auto; flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .nav-tabs a {
+    color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 5px 13px; font-size: 12px; font-weight: 700;
+    white-space: nowrap; transition: background 0.2s;
+    min-height: 32px; display: flex; align-items: center;
+  }
+  .nav-tabs a:hover { background: rgba(255,255,255,0.25); color: #fff; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 24px 16px; max-width: 900px; margin: 0 auto; }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px; font-weight: 700; color: var(--forest);
+    border-bottom: 3px solid var(--amber); padding-bottom: 6px; margin-bottom: 18px;
+  }
+
+  /* ── HOTEL GRID ── */
+  .hotel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .hotel-card {
+    background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+    padding: 14px; border-top: 4px solid var(--teal);
+    box-shadow: var(--shadow);
+  }
+  .hotel-card .dates { font-size: 11px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+  .hotel-card .name { font-weight: 800; font-size: 14px; color: var(--forest); margin-bottom: 3px; }
+  .hotel-card .loc { font-size: 12px; color: var(--muted); margin-bottom: 6px; line-height: 1.4; }
+  .hotel-card .nights {
+    font-size: 11px; background: rgba(11,122,106,0.1); color: var(--teal);
+    display: inline-block; border-radius: 10px; padding: 2px 9px; font-weight: 700;
+  }
+  .hotel-meta { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .hotel-meta-item { font-size: 11px; }
+  .hotel-meta-item .k { color: var(--muted); display: block; font-size: 10px; margin-bottom: 1px; }
+  .hotel-meta-item .v { font-weight: 700; color: var(--text); }
+  .hotel-meta-item .v.bkf-yes { color: var(--green); }
+  .hotel-meta-item .v.bkf-no  { color: var(--muted); }
+  .hmap { margin-top: 8px; }
+  .hmap a {
+    font-size: 11px; font-weight: 700; color: var(--teal);
+    background: rgba(11,122,106,0.08); border: 1px solid rgba(11,122,106,0.25);
+    padding: 3px 9px; border-radius: 12px; display: inline-block;
+  }
+
+  /* ── DAY BLOCK ── */
+  .day-block {
+    background: var(--card); border-radius: 12px; border: 1px solid var(--border);
+    margin-bottom: 16px; overflow: hidden; box-shadow: var(--shadow);
+  }
+  .day-header {
+    display: flex; align-items: center; gap: 14px;
+    padding: 13px 16px; background: #f9f5ee;
+    border-bottom: 1px solid var(--border);
+  }
+  .day-badge {
+    min-width: 52px; height: 52px; border-radius: 10px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-weight: 800; line-height: 1.1; color: #fff; flex-shrink: 0;
+  }
+  .day-badge .dnum { font-size: 22px; }
+  .day-badge .dmon { font-size: 9px; letter-spacing: 1px; opacity: 0.9; }
+  .day-header-text { flex: 1; min-width: 0; }
+  .day-header-text h3 {
+    font-size: 14px; font-weight: 800; color: var(--forest);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .day-header .day-meta { font-size: 11px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .day-hotel-badge {
+    flex-shrink: 0; font-size: 10px; background: rgba(11,122,106,0.1); color: var(--teal);
+    border-radius: 4px; padding: 3px 8px; white-space: nowrap; font-weight: 700;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { padding: 12px 16px 16px; }
+  .tl-item { display: flex; gap: 10px; margin-bottom: 14px; position: relative; }
+  .tl-item::before {
+    content: ''; position: absolute; left: 80px; top: 26px; bottom: -14px;
+    width: 2px; background: var(--border);
+  }
+  .tl-item:last-child::before { display: none; }
+  .tl-time {
+    min-width: 52px; font-size: 11px; font-weight: 700; color: var(--muted);
+    padding-top: 5px; text-align: right; flex-shrink: 0;
+  }
+  .tl-dot {
+    min-width: 22px; height: 22px; border-radius: 50%; margin-top: 3px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; font-weight: 800; color: #fff; z-index: 1; flex-shrink: 0;
+  }
+  .tl-content { flex: 1; min-width: 0; }
+  .tl-label { font-weight: 700; font-size: 13px; margin-bottom: 3px; color: var(--text); line-height: 1.4; }
+  .tl-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .tl-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+  .tag { font-size: 10px; border-radius: 4px; padding: 2px 7px; font-weight: 700; display: inline-block; }
+  .tag-price { background: #d5f5e3; color: #1a7a40; }
+  .tag-time  { background: #dbeafe; color: #1a5fa8; }
+  .tag-tip   { background: #fef9e7; color: #8a6d0a; }
+  .tag-food  { background: #fde8d8; color: #9a3a10; }
+  .tag-drive { background: #ede9fe; color: #5b21b6; }
+  .tag-warn  { background: #fee2e2; color: #9b1c1c; }
+
+  /* ── PLACE LINKS (tappable items in timeline) ── */
+  .place-link {
+    background: none; border: none; padding: 0; font: inherit; cursor: pointer;
+    color: var(--amber); font-weight: 800;
+    text-decoration: underline; text-decoration-style: dotted;
+    text-underline-offset: 3px; text-decoration-color: rgba(200,93,22,0.5);
+    display: inline; line-height: inherit;
+  }
+  .place-link:active { opacity: 0.7; }
+  .place-link::after { content: ' ↗'; font-size: 10px; opacity: 0.7; }
+
+  /* ── COLOUR DOTS ── */
+  .c-blue   { background: #1575A8; }
+  .c-orange { background: #C85D16; }
+  .c-green  { background: #27ae60; }
+  .c-red    { background: #BE2E2E; }
+  .c-teal   { background: #0B7A6A; }
+  .c-purple { background: #6B3FA0; }
+  .c-gray   { background: #7f8c8d; }
+
+  /* ── ATTRACTION CARDS ── */
+  .attr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .attr-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: var(--shadow); }
+  .attr-head { padding: 12px 14px 10px; color: #fff; }
+  .attr-head .title { font-weight: 800; font-size: 14px; line-height: 1.3; }
+  .attr-head .area  { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+  .attr-body { padding: 12px 14px; }
+  .info-row { display: flex; gap: 8px; margin-bottom: 6px; font-size: 12px; align-items: flex-start; }
+  .info-row .lbl { color: var(--muted); min-width: 72px; flex-shrink: 0; }
+  .info-row .val { font-weight: 700; }
+  .price-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 8px 0; }
+  .price-table th { background: #f5f0e8; padding: 5px 8px; text-align: left; font-weight: 700; color: var(--forest); }
+  .price-table td { padding: 5px 8px; border-top: 1px solid var(--border); }
+  .tips-list { margin: 8px 0 0; padding-left: 16px; }
+  .tips-list li { font-size: 12px; color: var(--muted); margin-bottom: 5px; line-height: 1.45; }
+  .tips-list li strong { color: var(--text); }
+  .badge-warn { background: #fee2e2; color: #9b1c1c; border-radius: 4px; padding: 3px 8px; font-size: 11px; font-weight: 700; display: inline-block; margin-top: 4px; }
+  .badge-free { background: #d5f5e3; color: #1a7a40; border-radius: 4px; padding: 3px 8px; font-size: 11px; font-weight: 700; display: inline-block; }
+
+  /* ── ATTR LINKS ── */
+  .attr-links { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 14px 12px; border-top: 1px solid var(--border); background: #faf7f2; }
+  .alink { font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 14px; text-decoration: none; white-space: nowrap; min-height: 30px; display: inline-flex; align-items: center; }
+  .alink-maps { background: #e0f0fa; color: #1575A8; border: 1px solid #b3d4f0; }
+  .alink-web  { background: #e0f5eb; color: #1a7a40; border: 1px solid #a9dfbf; }
+  .alink-yt   { background: #fee2e2; color: #9b1c1c; border: 1px solid #fca5a5; }
+  .alink:hover { opacity: 0.75; }
+
+  /* ── FOOD CARDS ── */
+  .food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .food-card { background: var(--card); border-radius: 10px; border: 1px solid var(--border); border-left: 4px solid var(--amber); padding: 13px 14px; box-shadow: var(--shadow); }
+  .food-card .fname { font-weight: 800; font-size: 13px; color: var(--amber); margin-bottom: 4px; }
+  .food-card .fmeta { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+  .food-card .fmust { font-size: 12px; margin-bottom: 4px; line-height: 1.45; }
+  .food-card .fmust span { font-style: italic; color: #555; }
+  .food-card .fprice { font-size: 11px; font-weight: 700; color: var(--green); margin-top: 2px; }
+  .food-card .fmap { margin-top: 6px; }
+  .food-card .fmap a { font-size: 11px; font-weight: 700; color: #1575A8; background: #e0f0fa; border: 1px solid #b3d4f0; padding: 3px 9px; border-radius: 12px; text-decoration: none; display: inline-block; }
+  .food-area-title { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; color: var(--forest); margin: 22px 0 10px; padding-bottom: 5px; border-bottom: 2px solid var(--border); }
+
+  /* ── TIPS ── */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .tip-card { background: var(--card); border-radius: 10px; border: 1px solid var(--border); padding: 14px; box-shadow: var(--shadow); }
+  .tip-card h4 { font-size: 13px; font-weight: 800; margin-bottom: 9px; color: var(--forest); }
+  .tip-card ol, .tip-card ul { padding-left: 16px; }
+  .tip-card li { font-size: 12px; color: var(--muted); margin-bottom: 5px; line-height: 1.45; }
+  .tip-card li strong { color: var(--text); }
+
+  /* ── BUDGET ── */
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .budget-table th { background: var(--forest); color: #fff; padding: 8px 12px; text-align: left; }
+  .budget-table td { padding: 8px 12px; border-top: 1px solid var(--border); }
+  .budget-table tr:nth-child(even) td { background: #f5f0e8; }
+  .budget-table .total td { background: #e8f5ee; font-weight: 700; border-top: 2px solid var(--forest); }
+  .budget-table .sgd { color: var(--green); font-weight: 700; }
+
+  /* ── ROUTE BAR ── */
+  .route-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; background: var(--card); border-radius: 8px; border: 1px solid var(--border); padding: 14px 16px; margin-bottom: 12px; }
+  .route-node { background: var(--forest); color: #fff; border-radius: 5px; padding: 4px 10px; font-size: 12px; font-weight: 700; }
+  .route-arrow { color: var(--muted); font-size: 14px; }
+  .route-dur { font-size: 11px; color: var(--muted); }
+
+  /* ── CHECKLIST ── */
+  .checklist-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
+  .checklist-toolbar .progress-text { font-size: 13px; color: var(--muted); font-weight: 700; }
+  .btn-reset { background: #fee2e2; color: var(--red); border: 1px solid #fca5a5; border-radius: 8px; padding: 7px 16px; font-size: 12px; font-weight: 700; cursor: pointer; min-height: 38px; font-family: inherit; }
+  .check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .check-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; cursor: pointer; transition: opacity 0.2s, background 0.2s; box-shadow: var(--shadow); }
+  .check-item.done { opacity: 0.4; background: #f5f0e8; }
+  .check-item.done .check-text strong { text-decoration: line-through; color: var(--muted); }
+  .check-input { width: 20px; height: 20px; min-width: 20px; border-radius: 4px; cursor: pointer; accent-color: var(--amber); margin-top: 2px; }
+  .check-text { font-size: 12px; line-height: 1.45; }
+  .check-text strong { display: block; margin-bottom: 2px; color: var(--text); font-size: 13px; font-weight: 800; }
+  .check-text span { color: var(--muted); }
+  .urgent-check { border-left: 3px solid var(--red); }
+  .urgent-check .check-text strong { color: var(--red); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--forest); color: rgba(255,255,255,0.55); text-align: center; padding: 20px 16px; font-size: 11px; margin-top: 32px; }
+
+  /* ── MODAL ── */
+  #modal-overlay {
+    position: fixed; inset: 0; background: rgba(10,25,15,0.55);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    z-index: 1000; opacity: 0; pointer-events: none;
+    transition: opacity 0.28s ease;
+  }
+  #modal-overlay.active { opacity: 1; pointer-events: all; }
+  #modal-sheet {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--bg); border-radius: 20px 20px 0 0;
+    max-height: 88vh; overflow-y: auto; overscroll-behavior: contain;
+    z-index: 1001;
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  #modal-sheet.active { transform: translateY(0); }
+  .modal-handle { width: 40px; height: 4px; background: var(--border); border-radius: 2px; margin: 14px auto 0; }
+  .modal-close-btn {
+    position: sticky; top: 0; display: flex; justify-content: flex-end;
+    padding: 10px 16px 0; z-index: 2; pointer-events: none;
+  }
+  .modal-close-btn button {
+    background: var(--border); border: none; border-radius: 50%; width: 34px; height: 34px;
+    font-size: 18px; cursor: pointer; font-family: inherit; color: var(--text);
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: all; box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  #modal-body { padding: 4px 16px 20px; }
+  /* cards inside modal: remove outer shadow (already in sheet) */
+  #modal-body .attr-card,
+  #modal-body .food-card,
+  #modal-body .hotel-card { box-shadow: none; border-color: var(--border); }
+
+  /* ── PRINT ── */
+  @media print {
+    .nav-tabs, #modal-overlay, #modal-sheet { display: none !important; }
+    .day-block, .attr-card { break-inside: avoid; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .attr-grid, .food-grid, .tips-grid, .check-grid { grid-template-columns: 1fr; }
+    .hotel-grid { grid-template-columns: 1fr 1fr; }
+    .budget-table { font-size: 11px; }
+    .budget-table th, .budget-table td { padding: 6px 7px; }
+  }
+  @media (max-width: 420px) {
+    .hero { padding: 32px 14px 24px; }
+    .hero h1 { font-size: 20px; }
+    .section { padding: 18px 12px; }
+    .alert-urgent { margin: 10px; }
+    .hotel-grid { grid-template-columns: 1fr; }
+    .day-header { padding: 10px 12px; gap: 10px; }
+    .day-badge { min-width: 44px; height: 44px; }
+    .day-badge .dnum { font-size: 18px; }
+    .day-header-text h3 { font-size: 13px; }
+    .timeline { padding: 10px 10px 14px; }
+    .tl-item { gap: 7px; }
+    .tl-time { min-width: 44px; font-size: 10px; }
+    .tl-dot { min-width: 20px; height: 20px; }
+    .tl-item::before { left: 73px; }
+    .day-hotel-badge { display: none; }
+    .section-title { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <h1>Malacca &amp; Port Dickson Family Trip</h1>
+  <div class="sub">14 – 22 June 2026 &nbsp;|&nbsp; 9 Days / 8 Nights &nbsp;|&nbsp; 2 Adults + 2 Boys (11 &amp; 8)</div>
+  <div class="hero-pills">
+    <span class="pill">Driving from Singapore</span>
+    <span class="pill">5 Hotels Booked</span>
+    <span class="pill">13+ Attractions</span>
+    <span class="pill">No Dietary Restrictions</span>
+  </div>
+</div>
+
+<!-- ═══ URGENT ALERT ═══ -->
+<div class="alert-urgent">
+  <strong>⚠ ACTION REQUIRED BEFORE TRAVEL (11 days away!)</strong>
+  <ul>
+    <li><strong>VEP (Vehicle Entry Permit)</strong> — ALL Singapore-registered cars must have a VEP to enter Malaysia. Processing takes 5–14 days. Apply now at <strong>vep.jpj.gov.my</strong> if not done. Failure = RM300 fine at border.</li>
+    <li><strong>VEP-RFID must be linked to Touch 'n Go (TNG) eWallet</strong> for the RM20 road entry charge — top up TNG to at least RM200.</li>
+    <li><strong>Pre-book Malaysia Heritage Studios</strong> via Ticket2U — can reach capacity on weekends.</li>
+    <li><strong>Call Funny Haunted Adventure (Port Dickson)</strong> before visiting — the venue has had past closures; verify it is currently open.</li>
+  </ul>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<div class="nav-tabs">
+  <a href="#hotels">Hotels</a>
+  <a href="#itinerary">Day-by-Day</a>
+  <a href="#attractions">Attractions</a>
+  <a href="#food">Food Guide</a>
+  <a href="#driving">Driving Tips</a>
+  <a href="#budget">Budget</a>
+  <a href="#checklist">Checklist</a>
+</div>
+
+<!-- ═══ HOTELS ═══ -->
+<div class="section" id="hotels">
+  <div class="section-title">Hotel Bookings</div>
+  <div class="hotel-grid">
+    <div class="hotel-card" id="hotel-ames">
+      <div class="dates">14 Jun (Sun) – 16 Jun (Tue)</div>
+      <div class="name">AMES Hotel Melaka</div>
+      <div class="loc">Ayer Keroh — near zoo, crocodile park, Heritage Studios</div>
+      <span class="nights">2 nights</span>
+      <div class="hotel-meta">
+        <div class="hotel-meta-item"><span class="k">Rate/night</span><span class="v">RM 370.00</span></div>
+        <div class="hotel-meta-item"><span class="k">Booked via</span><span class="v">Hotel website</span></div>
+        <div class="hotel-meta-item"><span class="k">Breakfast</span><span class="v bkf-yes">Included</span></div>
+        <div class="hotel-meta-item"><span class="k">2-night total</span><span class="v">RM 740.00</span></div>
+      </div>
+      <div class="hmap"><a href="https://maps.google.com/maps?q=AMES+Hotel+Melaka+Ayer+Keroh" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="hotel-card" id="hotel-birkin">
+      <div class="dates">16 Jun (Tue) – 17 Jun (Wed)</div>
+      <div class="name">Birkin Hotel Melaka</div>
+      <div class="loc">Melaka City Centre — near Jonker St, Klebang area</div>
+      <span class="nights">1 night</span>
+      <div class="hotel-meta">
+        <div class="hotel-meta-item"><span class="k">Rate/night</span><span class="v">RM 422.35</span></div>
+        <div class="hotel-meta-item"><span class="k">Booked via</span><span class="v">Trip.com</span></div>
+        <div class="hotel-meta-item"><span class="k">Breakfast</span><span class="v bkf-no">Not included</span></div>
+        <div class="hotel-meta-item"><span class="k">1-night total</span><span class="v">RM 422.35</span></div>
+      </div>
+      <div class="hmap"><a href="https://maps.google.com/maps?q=Birkin+Hotel+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="hotel-card" id="hotel-lexis">
+      <div class="dates">17 Jun (Wed) – 19 Jun (Fri)</div>
+      <div class="name">Lexis Hibiscus Port Dickson</div>
+      <div class="loc">Port Dickson Beachfront — resort with pool villas</div>
+      <span class="nights">2 nights</span>
+      <div class="hotel-meta">
+        <div class="hotel-meta-item"><span class="k">Rate/night</span><span class="v">RM 644.15</span></div>
+        <div class="hotel-meta-item"><span class="k">Booked via</span><span class="v">Trip.com</span></div>
+        <div class="hotel-meta-item"><span class="k">Breakfast</span><span class="v bkf-yes">Included</span></div>
+        <div class="hotel-meta-item"><span class="k">2-night total</span><span class="v">RM 1,288.30</span></div>
+      </div>
+      <div class="hmap"><a href="https://maps.google.com/maps?q=Lexis+Hibiscus+Port+Dickson" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="hotel-card" id="hotel-estadia">
+      <div class="dates">19 Jun (Fri) – 21 Jun (Sun)</div>
+      <div class="name">Estadia Hotel Malacca</div>
+      <div class="loc">Near MITC / Ayer Keroh — central for Melaka highlights</div>
+      <span class="nights">2 nights</span>
+      <div class="hotel-meta">
+        <div class="hotel-meta-item"><span class="k">Rate/night</span><span class="v">RM 325.95</span></div>
+        <div class="hotel-meta-item"><span class="k">Booked via</span><span class="v">Agoda</span></div>
+        <div class="hotel-meta-item"><span class="k">Breakfast</span><span class="v bkf-yes">Included</span></div>
+        <div class="hotel-meta-item"><span class="k">2-night total</span><span class="v">RM 651.90</span></div>
+      </div>
+      <div class="hmap"><a href="https://maps.google.com/maps?q=Estadia+Hotel+Malacca" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="hotel-card" id="hotel-sunway">
+      <div class="dates">21 Jun (Sun) – 22 Jun (Mon)</div>
+      <div class="name">Sunway Hotel Big Box</div>
+      <div class="loc">Iskandar Puteri, Johor Bahru — last night before home</div>
+      <span class="nights">1 night</span>
+      <div class="hotel-meta">
+        <div class="hotel-meta-item"><span class="k">Rate/night</span><span class="v">RM 456.86</span></div>
+        <div class="hotel-meta-item"><span class="k">Booked via</span><span class="v">Agoda</span></div>
+        <div class="hotel-meta-item"><span class="k">Breakfast</span><span class="v bkf-yes">Included</span></div>
+        <div class="hotel-meta-item"><span class="k">1-night total</span><span class="v">RM 456.86</span></div>
+      </div>
+      <div class="hmap"><a href="https://maps.google.com/maps?q=Sunway+Hotel+Big+Box+Iskandar+Puteri+Johor" target="_blank">Google Maps</a></div>
+    </div>
+    <div style="background:#f0f9f4;border:1px solid #a9dfbf;border-radius:8px;padding:12px 16px;margin-top:12px;font-size:13px;">
+      <strong style="color:#1e8449;">Total Hotel Cost: RM 3,559.41</strong>
+      <span style="color:#555;margin-left:12px;">≈ SGD 1,079</span>
+      <div style="font-size:11px;color:#666;margin-top:4px;">
+        AMES RM740 + Birkin RM422.35 + Lexis RM1,288.30 + Estadia RM651.90 + Sunway RM456.86
+        &nbsp;|&nbsp; Breakfast included at AMES, Lexis, Estadia, Sunway. <strong>Birkin: no breakfast — plan to eat out.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ITINERARY ═══ -->
+<div class="section" id="itinerary">
+  <div class="section-title">Day-by-Day Itinerary</div>
+
+  <!-- DAY 1 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-blue"><span class="dnum">14</span><span class="dmon">JUN SUN</span></div>
+      <div class="day-header-text">
+        <h3>Singapore → Ayer Keroh, Melaka</h3>
+        <div class="day-meta">4am Woodlands departure · Arrive ~7am · Bee Gallery + Crocodile Park</div>
+      </div>
+      <div class="day-hotel-badge">AMES Hotel</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">~03:30</div>
+        <div class="tl-dot c-gray">P</div>
+        <div class="tl-content">
+          <div class="tl-label">Fill Petrol Before Crossing (Singapore law: min ¾ tank)</div>
+          <div class="tl-desc">24-hour stations near Woodlands: Shell Woodlands Avenue 3, Caltex Marsiling, SPC along Woodlands Road. Fill to full — cheaper than Malaysia RON97 is still a good deal, but you must start with ¾ tank minimum.</div>
+          <div class="tl-tags">
+            <span class="tag tag-warn">Singapore law — enforced. Fine if below ¾ tank at checkpoint.</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">04:00</div>
+        <div class="tl-dot c-blue">D</div>
+        <div class="tl-content">
+          <div class="tl-label">Depart Singapore — Woodlands Causeway</div>
+          <div class="tl-desc">4am Saturday is a good time: post-midnight crowd gone, early lorry rush is tailing off. Kids can sleep in the car. Have IC/passport easily accessible. SLE → Woodlands exit → Causeway.</div>
+          <div class="tl-tags">
+            <span class="tag tag-tip">Kids can sleep the whole drive — bring pillows/blankets</span>
+            <span class="tag tag-tip">Coffee/energy drink for the driver</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">04:10</div>
+        <div class="tl-dot c-gray">SG</div>
+        <div class="tl-content">
+          <div class="tl-label">Singapore Immigration — Woodlands Checkpoint (WCP)</div>
+          <div class="tl-desc">At 4am Saturday, expect ~10–20 minutes. Scan passports/IC at kiosk, proceed. Note: some commercial lorry traffic at this hour but passenger car lanes move faster.</div>
+          <div class="tl-tags">
+            <span class="tag tag-drive">~10–20 min clearance</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">04:30</div>
+        <div class="tl-dot c-gray">MY</div>
+        <div class="tl-content">
+          <div class="tl-label">Malaysia Immigration — Sultan Iskandar Building (CIQ), JB</div>
+          <div class="tl-desc">At 4am Saturday, typically 15–30 minutes. Declare nothing dutiable. After clearing, navigate through JB city to reach PLUS highway northbound (Skudai / Jalan Tun Abdul Razak → PLUS interchange). At 4am, JB traffic is minimal.</div>
+          <div class="tl-tags">
+            <span class="tag tag-drive">~15–30 min clearance + ~15 min to PLUS highway</span>
+            <span class="tag tag-tip">Use Waze — it guides you through JB to PLUS entry point</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">05:00</div>
+        <div class="tl-dot c-blue">HW</div>
+        <div class="tl-content">
+          <div class="tl-label">On PLUS Highway — JB to Ayer Keroh (~200km)</div>
+          <div class="tl-desc">Highway is almost empty at 5am. Drive at 100–105 km/h (speed cameras active). Ayer Keroh R&amp;R is your last rest stop before the Ayer Keroh exit — use it if anyone needs the toilet. Kids will likely be asleep.</div>
+          <div class="tl-tags">
+            <span class="tag tag-drive">~2 hours to Ayer Keroh exit</span>
+            <span class="tag tag-tip">Ayer Keroh R&R is just before your exit — convenient toilet stop</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">07:00</div>
+        <div class="tl-dot c-teal">A</div>
+        <div class="tl-content">
+          <div class="tl-label">Arrive Ayer Keroh — Drop Bags at AMES Hotel</div>
+          <div class="tl-desc">Hotel check-in is standard 2–3pm, but you can drop bags at the front desk. Let the reception know your room preference (e.g. higher floor, quiet side). Ask if an early check-in room happens to be ready — sometimes you get lucky on weekends.</div>
+          <div class="tl-tags">
+            <span class="tag tag-warn">Room won't be ready until 2–3pm — plan outdoor activities first</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">07:15</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Early Breakfast — Mamak near Ayer Keroh</div>
+          <div class="tl-desc">Look for a Chinese kopitiam near Ayer Keroh — kopi-o, kaya toast, half-boiled eggs, and wonton mee are common at 7am. Alternatively, Mydin MITC food court opens at 8:30am on weekends with Chinese stalls (char kway teow, bak chor mee). Petrol station forecourt shops near the exit also have basic food if needed. Kids can wake up slowly over breakfast.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">RM5–10/person</span>
+            <span class="tag tag-tip">Mydin MITC food court opens 8:30am Sat — another option</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">08:30</div>
+        <div class="tl-dot c-gray">R</div>
+        <div class="tl-content">
+          <div class="tl-label">Rest &amp; Kids Wake-Up Time — Hotel Lobby or Nearby</div>
+          <div class="tl-desc">Boys may have slept the whole drive and will wake up refreshed. Use this ~30 min buffer to change clothes (bring a bag with fresh clothes accessible, not packed in the boot), freshen up in hotel lobby toilets, and let the kids have some energy before the first attraction.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-orange">BG</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-bee-gallery">Bee Gallery (Galeri Lebah Melaka)</span> — FREE</div>
+          <div class="tl-desc">Opens at 9am — you're first in! Free and quick (~1h). Honey tasting, live bee observation behind glass. 2 min from AMES Hotel. Perfect low-key start after an early morning.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">FREE admission</span>
+            <span class="tag tag-time">~1 hour</span>
+            <span class="tag tag-tip">Being first in means no school groups at all</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:00</div>
+        <div class="tl-dot c-red">C</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-crocodile">Crocodile Adventure Land &amp; Recreational Park</span></div>
+          <div class="tl-desc">Opens 9am — arrive at 10am to be settled before the 11:30am show. Water playground for the boys (bring swimwear + change of clothes in a day bag from the car). Horse rides (RM1–5), animal feeding packs (RM10) on-site.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM22 | Child RM19 (Non-Malaysian)</span>
+            <span class="tag tag-time">2.5–3.5 hours</span>
+            <span class="tag tag-tip">Catch 11:30am show — most dramatic croc show of the day</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:30</div>
+        <div class="tl-dot c-gray">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — <span class="place-link" data-target="food-mydin">Mydin MITC Food Court</span> (3 min drive)</div>
+          <div class="tl-desc">Affordable hawker variety: nasi lemak, char kway teow, roti canai, laksa. Huge air-conditioned food court — good break from the heat after the crocodile park.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM5–12/person</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:30</div>
+        <div class="tl-dot c-teal">CI</div>
+        <div class="tl-content">
+          <div class="tl-label">Official Check-in — AMES Hotel Room Ready</div>
+          <div class="tl-desc">Room should be ready by now. Shower, unpack essentials, let everyone nap if needed (especially if the adults are feeling the 4am wake-up). A 1-hour nap now = more energy for the Jonker Street night market later.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:00</div>
+        <div class="tl-dot c-gray">N</div>
+        <div class="tl-content">
+          <div class="tl-label">OPTIONAL: Nap / Rest at Hotel</div>
+          <div class="tl-desc">You've been up since 3:30am. A short afternoon rest is worth it — you have 8 more days ahead.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">18:30</div>
+        <div class="tl-dot c-orange">E</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — <span class="place-link" data-target="food-lucky-palace">Lucky Palace</span> or Mydin Food Court</div>
+          <div class="tl-desc">Lucky Palace for a sit-down meal (steamed chicken, seafood), or Mydin MITC food court for quick hawker dinner before heading to Jonker.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM5–35/person depending on restaurant choice</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">20:00</div>
+        <div class="tl-dot c-purple">J</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-jonker">OPTIONAL: Jonker Street Night Market (Saturday)</span></div>
+          <div class="tl-desc">~30 min drive from Ayer Keroh. If the family has energy, this is a great Saturday night outing. Street goes pedestrian from 6pm. Kids will love the snacks and atmosphere. If everyone is tired from the early start — skip it, you have Sunday evening too.</div>
+          <div class="tl-tags">
+            <span class="tag tag-tip">Only go if everyone is still fresh — skip if the 4am start has caught up</span>
+            <span class="tag tag-tip">Park at Mahkota Parade or use Grab to avoid parking stress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-green"><span class="dnum">15</span><span class="dmon">JUN MON</span></div>
+      <div class="day-header-text">
+        <h3>Full Day Ayer Keroh — Zoo + Heritage + Jonker Night</h3>
+        <div class="day-meta">Zoo Melaka · Dinosaur Encounter · Malaysia Heritage Studios · Jonker Night Market</div>
+      </div>
+      <div class="day-hotel-badge">AMES Hotel</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">07:30</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-ames">AMES Hotel</span> (included)</div>
+          <div class="tl-desc">Breakfast is included in your AMES booking. Enjoy the hotel spread before a big day at the zoo — you'll be walking for 3–4 hours so fuel up well.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — no extra cost</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-green">Z</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-zoo">Zoo Melaka + Dinosaur Encounter Park</span></div>
+          <div class="tl-desc">Weekend hours 9am–6pm. The Dinosaur Encounter (100 life-sized animatronic dinosaurs across 5-acre forest trail) is included in the Zoo ticket. Boys aged 8 &amp; 11 will love this. Wear closed shoes. Bring snacks.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult ~RM38 | Child ~RM31 (verify non-Malaysian rate)</span>
+            <span class="tag tag-time">3–4 hours</span>
+            <span class="tag tag-tip">Arrive 9am to beat weekend crowds</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:00</div>
+        <div class="tl-dot c-orange">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — Near Zoo or at Hotel</div>
+          <div class="tl-desc">Zoo canteen is functional. Alternatively drive 5 min back to AMES area for lunch.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM10–20/person</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:30</div>
+        <div class="tl-dot c-teal">M</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-heritage">Malaysia Heritage Studios</span></div>
+          <div class="tl-desc">13 themed zones covering all Malaysian states' architectural heritage. Children's Corner with interactive games, storytelling, and craft. Pre-booked tickets recommended (Ticket2U). Semi-outdoor — visit in the afternoon when partially shaded.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM71 | Child RM55 (Non-Malaysian)</span>
+            <span class="tag tag-time">1.5–3 hours</span>
+            <span class="tag tag-warn">Pre-book via Ticket2U — can sell out on weekends</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">17:30</div>
+        <div class="tl-dot c-gray">R</div>
+        <div class="tl-content">
+          <div class="tl-label">Return to Hotel — Freshen Up</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">18:00</div>
+        <div class="tl-dot c-purple">J</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-jonker">Jonker Street Night Market (Sun — Last Chance this block)</span></div>
+          <div class="tl-desc">~30 min drive. Arrive 6–6:30pm before crowds peak. Dinner here: try Capitol Satay Celup (Chinese-Melaka skewers in peanut sauce, RM1/stick, opens 4pm — arrive early, waits hit 1hr+ by 7pm), Jonker 88 cendol dessert after, browse the stalls for coconut ice cream and grilled quail eggs. Hoe Kee Chicken Rice Ball opens from 9:30am — save that for Day 2 lunch.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Budget RM25–40/person for dinner</span>
+            <span class="tag tag-tip">Park at Dataran Pahlawan mall or use Grab</span>
+            <span class="tag tag-tip">Mamee Jonker House — kids DIY noodle cup activity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-teal"><span class="dnum">16</span><span class="dmon">JUN TUE</span></div>
+      <div class="day-header-text">
+        <h3>Move to City Centre — Shore Oceanarium + Jonker + Klebang Night</h3>
+        <div class="day-meta">The Shore Oceanarium · Jonker Street · Submarine Museum · MoCity Cosmic Park</div>
+      </div>
+      <div class="day-hotel-badge">Birkin Hotel</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">07:30</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-ames">AMES Hotel</span> (included)</div>
+          <div class="tl-desc">Last breakfast at AMES — included in your 2-night stay. Pack bags after, then checkout and head to Birkin Hotel in the city centre.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — no extra cost</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-gray">CO</div>
+        <div class="tl-content">
+          <div class="tl-label">Checkout AMES Hotel → Check-in Birkin Hotel</div>
+          <div class="tl-desc">Move to Melaka city centre. ~20 min drive. Drop bags at Birkin Hotel (city centre location near Jonker Street).</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:30</div>
+        <div class="tl-dot c-blue">O</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-oceanarium">The Shore Oceanarium</span></div>
+          <div class="tl-desc">Located in The Shore Shopping Gallery. Interactive touch pool (sea cucumbers, bamboo sharks), sea turtle feeding, Kampung Penyu turtle pool, kids quiz trail with souvenir at end. Free parking in mall.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM40 | Child RM30</span>
+            <span class="tag tag-time">1.5–2.5 hours</span>
+            <span class="tag tag-tip">Add Feeding Frenzy package (+RM10) for turtle feeding</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:00</div>
+        <div class="tl-dot c-orange">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — <span class="place-link" data-target="food-hoe-kee">Hoe Kee Chicken Rice Ball</span> (Jonker Street)</div>
+          <div class="tl-desc">Melaka's most famous chicken rice ball. Closes around 4:30pm. Get there before 1:30pm to avoid long waits. Steamed chicken with perfectly seasoned rice balls, ginger sauce.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">RM12–20/person</span>
+            <span class="tag tag-warn">Closes ~4:30pm — lunch only!</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:30</div>
+        <div class="tl-dot c-purple">J</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-jonker">Jonker Street Daytime Walk</span></div>
+          <div class="tl-desc">Shops open daily from 10am (no night market on Tue). Explore antique shops, Peranakan boutiques, Jonker 88 for cendol with thick gula Melaka (RM5–8). Pick up local snacks.</div>
+          <div class="tl-tags">
+            <span class="tag tag-time">~1 hour</span>
+            <span class="tag tag-tip">Nancy's Kitchen for Nyonya food — book ahead (closes 5pm)</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:00</div>
+        <div class="tl-dot c-blue">S</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-submarine">KD Rahmat Submarine Museum</span> — Klebang</div>
+          <div class="tl-desc">~20 min drive from Birkin. Real Agosta-70 submarine you can walk through — torpedo room, engine room, crew quarters. Boys will love the claustrophobic experience. Closes 5pm Mon–Thu. Arrive by 4pm to have 1 hour.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM20 | Child RM10 (Non-Malaysian)</span>
+            <span class="tag tag-time">1–1.5 hours</span>
+            <span class="tag tag-warn">Cash only — bring small notes</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">18:00</div>
+        <div class="tl-dot c-orange">D</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — Near Klebang / Pantai Klebang area</div>
+          <div class="tl-desc">Catch sunset at Pantai Klebang beach (free, beautiful) before dinner. Coconut shake stalls at Klebang are famous — must try! Local food stalls and restaurants in the area.</div>
+          <div class="tl-tags">
+            <span class="tag tag-tip">Famous Klebang coconut shake — RM4–6</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">19:30</div>
+        <div class="tl-dot c-purple">MC</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-mocity">MoCity Cosmic Park</span> + <span class="place-link" data-target="card-crazy-racing">Crazy Racing Melaka</span> — Klebang</div>
+          <div class="tl-desc">Both are next to each other at Klebang. MoCity: neon-lit indoor/outdoor carnival with trampolines, arcade, bumper cars, pirate ship — shines at night. Crazy Racing: go-kart track (10 min RM40, open until 1am). 11yr old should be fine solo driving; check height for 8yr old.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">MoCity Indoor: Adult RM68 | Child RM38</span>
+            <span class="tag tag-price">Crazy Racing: RM40/10min per person</span>
+            <span class="tag tag-time">2–4 hours</span>
+            <span class="tag tag-tip">Budget RM80–120 per child for rides</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-teal"><span class="dnum">17</span><span class="dmon">JUN WED</span></div>
+      <div class="day-header-text">
+        <h3>Melaka → Port Dickson — Resort Day</h3>
+        <div class="day-meta">Drive to Lexis Hibiscus · Beach + Pool · Seafood Dinner</div>
+      </div>
+      <div class="day-hotel-badge">Lexis Hibiscus PD</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-gray">CO</div>
+        <div class="tl-content">
+          <div class="tl-label">Checkout Birkin Hotel</div>
+          <div class="tl-desc">Quick breakfast, pack up. Easy drive day ahead.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:30</div>
+        <div class="tl-dot c-blue">D</div>
+        <div class="tl-content">
+          <div class="tl-label">Drive: Melaka → Port Dickson</div>
+          <div class="tl-desc">~105km via PLUS highway toward Seremban, then Port Dickson exit. Very straightforward drive.</div>
+          <div class="tl-tags"><span class="tag tag-drive">~1 hour 10 min</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:45</div>
+        <div class="tl-dot c-teal">H</div>
+        <div class="tl-content">
+          <div class="tl-label">Arrive <span class="place-link" data-target="hotel-lexis">Lexis Hibiscus Port Dickson</span></div>
+          <div class="tl-desc">Beachfront resort. Request early check-in. Drop bags. Resort facilities: pool villa, beach, water sports, multiple restaurants (Roselle Coffee House, UMI Japanese, Wave Dining).</div>
+          <div class="tl-tags">
+            <span class="tag tag-tip">Kids loved the pool villas and private deck at Lexis — book a pool villa if available</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30</div>
+        <div class="tl-dot c-blue">P</div>
+        <div class="tl-content">
+          <div class="tl-label">Pool, Beach &amp; Resort Activities</div>
+          <div class="tl-desc">Relax day! Boys can enjoy the pool/beach. Resort offers water sports, kayaking, pedal boats. Enjoy a slower afternoon after two packed days.</div>
+          <div class="tl-tags"><span class="tag tag-time">Full afternoon</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:00</div>
+        <div class="tl-dot c-orange">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — Resort (Roselle Coffee House)</div>
+          <div class="tl-desc">Convenient since you're settling in. Buffet or à la carte available.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">19:00</div>
+        <div class="tl-dot c="c-orange">E</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — <span class="place-link" data-target="food-weng-yin">Weng Yin Seafood Village</span> (~5 min drive)</div>
+          <div class="tl-desc">25-year-old Chinese seafood institution. Salted egg prawns, steamed fish, bamboo lala clams. Outdoor setting. Go early on Tuesday — less crowded than weekends.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">RM35–60/person</span>
+            <span class="tag tag-tip">~1.4 miles from Lexis Hibiscus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-green"><span class="dnum">18</span><span class="dmon">JUN THU</span></div>
+      <div class="day-header-text">
+        <h3>Port Dickson Full Day — Mini Zoo + Haunted + Army Museum</h3>
+        <div class="day-meta">PD Mini Zoo · Funny Haunted Adventure · Army Museum PD</div>
+      </div>
+      <div class="day-hotel-badge">Lexis Hibiscus PD</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">08:00</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-lexis">Lexis Hibiscus</span> (included)</div>
+          <div class="tl-desc">Breakfast at Roselle Coffee House is included in your Lexis Hibiscus booking. Enjoy the resort buffet — a good mix of local and Western options — before heading out for the day.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — Roselle Coffee House, resort level</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-green">Z</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-pd-zoo">Port Dickson Mini Zoo</span></div>
+          <div class="tl-desc">Opened June 2025 at former Aurora Park PD. Very hands-on: feed and pet alpacas, goats, rabbits, raccoons, peacocks, ostriches, capybaras. Horse riding, mini tank rides, fish spa. Entirely outdoors — go early before midday heat. Bring sunscreen.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM40 | Child RM30 (Non-Malaysian)</span>
+            <span class="tag tag-time">1.5–2.5 hours</span>
+            <span class="tag tag-tip">~15 min drive from Lexis Hibiscus</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30</div>
+        <div class="tl-dot c-purple">FH</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-haunted">Funny Haunted Adventure</span></div>
+          <div class="tl-desc">Split into haunted house section + 3D art gallery photo zone. Not very scary for adults; 8-year-old may find the haunted section intense — parents decide on the day. Staff assist with 3D photo poses. Good as a short filler. Call ahead to verify operational.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">~RM15–25/person (package incl. 3D gallery)</span>
+            <span class="tag tag-time">Under 1 hour</span>
+            <span class="tag tag-warn">Verify open — call ahead. Lorong Anika 1, PD.</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">12:30</div>
+        <div class="tl-dot c-orange">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — <span class="place-link" data-target="food-pd-seafood">Chinese Seafood Restaurant, Jalan Pantai PD</span></div>
+          <div class="tl-desc">Drive along Jalan Pantai for a Chinese seafood lunch — look for restaurants with live tanks outside. Order steamed prawns, tofu with minced pork, stir-fried morning glory, and a whole fish. Cheaper at lunch than dinner.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM25–45/person</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:30</div>
+        <div class="tl-dot c-red">AM</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-army-museum">Army Museum Port Dickson</span> (Muzium Tentera Darat)</div>
+          <div class="tl-desc">Open Wednesday — timed perfectly! Outdoor exhibits: steam locomotives, military aircraft, helicopters, armoured vehicles, field guns. Mock underground communist tunnel network from Malaysia's Emergency period — fascinating for all ages. Cafe, souvenir shop, rope bridge trail on-site.</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Adult RM5 | Child RM2 (Foreigner)</span>
+            <span class="tag tag-time">1.5–2.5 hours</span>
+            <span class="tag tag-warn">CLOSED Mon &amp; Tue — Wed visit is ideal timing</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">17:30</div>
+        <div class="tl-dot c-blue">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Back to Resort — Beach &amp; Pool Time</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">19:00</div>
+        <div class="tl-dot c-orange">E</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — Chinese Seafood along Jalan Pantai or Resort</div>
+          <div class="tl-desc">Drive along Jalan Pantai (coastal road) toward Batu 3–8 for Chinese seafood restaurants with live tanks — order fresh crabs, prawns, steamed fish. Alternatively dine at Lexis Hibiscus resort for convenience (Roselle Coffee House has Chinese dishes).</div>
+          <div class="tl-tags"><span class="tag tag-food">RM30–55/person (seafood) | Higher at resort</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 6 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-orange"><span class="dnum">19</span><span class="dmon">JUN FRI</span></div>
+      <div class="day-header-text">
+        <h3>Port Dickson → Back to Melaka (Estadia Hotel)</h3>
+        <div class="day-meta">Last morning at resort · Drive back · Mydin Shopping</div>
+      </div>
+      <div class="day-hotel-badge">Estadia Hotel</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">08:00</div>
+        <div class="tl-dot c-blue">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Last Morning at Lexis Hibiscus — Beach Swim</div>
+          <div class="tl-desc">Final dip before checkout. Breakfast at Roselle Coffee House (resort).</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:00</div>
+        <div class="tl-dot c-gray">CO</div>
+        <div class="tl-content">
+          <div class="tl-label">Checkout Lexis Hibiscus</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:30</div>
+        <div class="tl-dot c-blue">D</div>
+        <div class="tl-content">
+          <div class="tl-label">Drive: Port Dickson → Melaka (Estadia Hotel)</div>
+          <div class="tl-tags"><span class="tag tag-drive">~1 hour 10 min</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:00</div>
+        <div class="tl-dot c-orange">L</div>
+        <div class="tl-content">
+          <div class="tl-label">Lunch — En Route or Ayer Keroh area</div>
+          <div class="tl-desc">Stop at Machap R&amp;R for a rest and quick bite, or head straight to Estadia area for lunch.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:00</div>
+        <div class="tl-dot c-teal">H</div>
+        <div class="tl-content">
+          <div class="tl-label">Check in <span class="place-link" data-target="hotel-estadia">Estadia Hotel Malacca</span></div>
+          <div class="tl-desc">Near MITC / Ayer Keroh. 2 min from Mydin MITC.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">15:00</div>
+        <div class="tl-dot c-blue">S</div>
+        <div class="tl-content">
+          <div class="tl-label">Mydin MITC Shopping</div>
+          <div class="tl-desc">2 min from hotel. Stock up on Malaysian snacks, Mamee noodles, local tidbits significantly cheaper than Singapore. Parking only RM1.</div>
+          <div class="tl-tags">
+            <span class="tag tag-tip">Great for buying back souvenirs: Dodol, Malay kueh, local biscuits</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">19:00</div>
+        <div class="tl-dot c-orange">E</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — <span class="place-link" data-target="food-lucky-palace">Lucky Palace Restaurant</span> or Mydin Food Court</div>
+          <div class="tl-desc">Lucky Palace: Mei Cai Rice, steamed chicken, seafood. Or Mydin MITC Food Court for affordable hawker variety.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM20–35/person (Lucky Palace) | RM5–12 (food court)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 7 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-purple"><span class="dnum">20</span><span class="dmon">JUN SAT</span></div>
+      <div class="day-header-text">
+        <h3>Ayer Keroh Flex Day + Jonker Night Market (Sat!)</h3>
+        <div class="day-meta">Melaka Wonderland (option) · Jonker Street Night Market</div>
+      </div>
+      <div class="day-hotel-badge">Estadia Hotel</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">10:00</div>
+        <div class="tl-dot c-blue">W</div>
+        <div class="tl-content">
+          <div class="tl-label">OPTION A: <span class="place-link" data-target="card-wonderland">Melaka Wonderland Water Theme Park</span></div>
+          <div class="tl-desc">Massive water theme park with 16 attractions: Tornado Chaser (first in Malaysia), Big Wave Pool. Perfect for a hot Friday. Tues–Sun 10am–6pm (closed Mon, open Fri).</div>
+          <div class="tl-tags">
+            <span class="tag tag-price">Weekday: Adult RM36 | Child RM29 (Malaysian) — foreigners slightly higher</span>
+            <span class="tag tag-time">3–5 hours</span>
+            <span class="tag tag-tip">Bring own towels + water shoes</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:00</div>
+        <div class="tl-dot c-green">SK</div>
+        <div class="tl-content">
+          <div class="tl-label">OPTION B: <span class="place-link" data-target="card-skytrex">Skytrex Adventure Melaka</span> (near Zoo Melaka)</div>
+          <div class="tl-desc">Tree-to-tree aerial obstacle course suitable for ages 7+. Multiple difficulty levels. Great for the boys. Check current pricing at skytrex.com.my (~RM60/person).</div>
+          <div class="tl-tags">
+            <span class="tag tag-time">2–3 hours</span>
+            <span class="tag tag-tip">Ages 7+ — both boys eligible</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">16:00</div>
+        <div class="tl-dot c-gray">R</div>
+        <div class="tl-content">
+          <div class="tl-label">Rest at Hotel — Freshen Up for Jonker</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">18:00</div>
+        <div class="tl-dot c-purple">J</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-jonker">Jonker Street Night Market (Friday!)</span></div>
+          <div class="tl-desc">~30 min drive from Estadia Hotel. Arrive 6pm sharp for best stall selection before crowds peak. Don't miss: cendol (Jonker 88), Capitol Satay Celup (opens 4pm), grilled quail eggs, coconut ice cream, tong sui desserts. Satay Celup: arrive early — waits hit 1hr+ by 7pm.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Budget RM30–50/person for dinner + snacks</span>
+            <span class="tag tag-tip">Park at Mahkota Parade / Dataran Pahlawan or Grab in</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 8 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-red"><span class="dnum">21</span><span class="dmon">JUN SUN</span></div>
+      <div class="day-header-text">
+        <h3>Last Melaka Morning → Johor Bahru</h3>
+        <div class="day-meta">Jonker Street daytime · Drive to JB · JB Dinner</div>
+      </div>
+      <div class="day-hotel-badge">Sunway Hotel Big Box JB</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-purple">J</div>
+        <div class="tl-content">
+          <div class="tl-label"><span class="place-link" data-target="card-jonker">Jonker Street Daytime + Chicken Rice Ball Breakfast/Lunch</span></div>
+          <div class="tl-desc">Last chance for Melaka classics. Hoe Kee Chicken Rice Ball opens from ~9:30am (closes ~4:30pm). Pick up last-minute souvenirs and Melaka-made dodol, pineapple tarts, Nyonya kueh to bring home.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM12–20/person</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">10:30</div>
+        <div class="tl-dot c-gray">CO</div>
+        <div class="tl-content">
+          <div class="tl-label">Checkout Estadia Hotel → Drive to Johor Bahru</div>
+          <div class="tl-tags"><span class="tag tag-drive">~2–2.5 hours via PLUS (NSE Southbound)</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">13:30</div>
+        <div class="tl-dot c-teal">H</div>
+        <div class="tl-content">
+          <div class="tl-label">Check in Sunway Hotel Big Box, Iskandar Puteri JB</div>
+          <div class="tl-desc">Located in the Sunway Big Box mall complex. Great for last-minute Malaysian shopping (electronics, clothes, groceries).</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">14:00</div>
+        <div class="tl-dot c-blue">M</div>
+        <div class="tl-content">
+          <div class="tl-label">Sunway Big Box Mall + AEON Tebrau City (optional)</div>
+          <div class="tl-desc">Sunway Big Box has HomeBase (home goods), Giant supermarket, food outlets. For more shopping, AEON Tebrau City is ~15 min away. Last chance for Malaysian purchases.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">19:00</div>
+        <div class="tl-dot c-orange">E</div>
+        <div class="tl-content">
+          <div class="tl-label">Dinner — Choose Your Last-Night Restaurant</div>
+          <div class="tl-desc">Three solid options: <strong>LS Seafood</strong> (Sunway Marketplace, 5 min away — Cantonese crab, prawns, fish, pork-free); <strong>Bob's Grill &amp; Bar</strong> (0.7 mi away — beef tenderloin, garlic bread, highly rated 4.8/5, a good treat-yourself option); or drive ~20 min to JB old town for classic <strong>Bak Kut Teh</strong>.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">LS Seafood RM40–80 | Bob's Grill RM40–70 | BKT RM15–25/person</span>
+            <span class="tag tag-tip">Bob's Grill — book ahead on weekends (Sunday)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 9 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge c-green"><span class="dnum">22</span><span class="dmon">JUN MON</span></div>
+      <div class="day-header-text">
+        <h3>JB → Home Singapore</h3>
+        <div class="day-meta">Dim Sum Breakfast · Last Shopping · Cross Back via Tuas</div>
+      </div>
+      <div class="day-hotel-badge">Return Home</div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">07:00</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Breakfast — <span class="place-link" data-target="food-jiah-xiang">Jiah Xiang Dim Sum</span> (opens 7am)</div>
+          <div class="tl-desc">Handmade dim sum: Big Meat Bao, XLB (xiao long bao), Golden Bao. Nearly 50 varieties. Short drive from hotel. JB dim sum quality is excellent and very affordable.</div>
+          <div class="tl-tags"><span class="tag tag-food">RM15–30/person</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">09:00</div>
+        <div class="tl-dot c-blue">S</div>
+        <div class="tl-content">
+          <div class="tl-label">Last Shopping + Checkout</div>
+          <div class="tl-desc">Sunway Big Box opens 10am. Giant supermarket for final grocery buys. Checkout by 12pm.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-time">11:00</div>
+        <div class="tl-dot c-red">D</div>
+        <div class="tl-content">
+          <div class="tl-label">Drive Back to Singapore — via TUAS Second Link</div>
+          <div class="tl-desc">CRITICAL: Use Tuas Second Link on Sunday afternoon — the Woodlands Causeway is typically jammed 4–9pm on Sundays with 1.5–2 hour queues. Leave JB before 12pm or after 9pm to minimise waiting.</div>
+          <div class="tl-tags">
+            <span class="tag tag-drive">~30 min crossing (off-peak)</span>
+            <span class="tag tag-warn">Sunday Causeway peak: 4–9pm — avoid Woodlands</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ATTRACTIONS ═══ -->
+<div class="section" id="attractions">
+  <div class="section-title">Attraction Quick Reference</div>
+  <div class="attr-grid">
+
+    <div class="attr-card" id="card-crocodile">
+      <div class="attr-head" style="background:#c0392b">
+        <div>
+          <div class="title">Crocodile Adventure Land</div>
+          <div class="area">Taman Buaya &amp; Rekreasi, Ayer Keroh</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 9am – 6pm (last entry 5pm); Water playground closed Mon</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan MH3, Taman Muzaffar Heights, Ayer Keroh (~3 min from AMES Hotel)</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child</th></tr>
+          <tr><td>Non-Malaysian</td><td>RM22</td><td>RM19</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">2.5 – 3.5 hours</span></div>
+        <ul class="tips-list">
+          <li><strong>Shows:</strong> 11:30am, 12:30pm, 2:30pm, 3:30pm — plan arrival to catch one</li>
+          <li><strong>Bring swimwear</strong> for the water playground; it closes on Mondays</li>
+          <li>Animal feeding packs (RM10) and horse rides (RM1–5) available on-site</li>
+          <li>Arrives early on weekends — queues build after 11am</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Taman+Buaya+Rekreasi+Ayer+Keroh+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.melakabook.my/attractions/melaka-crocodile-and-recreation-park" target="_blank">MelakaBook Review</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Crocodile+Adventure+Land+Melaka" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-bee-gallery">
+      <div class="attr-head" style="background:#f39c12">
+        <div>
+          <div class="title">Bee Gallery (Galeri Lebah Melaka)</div>
+          <div class="area">Ayer Keroh — 2 min from AMES Hotel</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 9:00am – 5:30pm</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Taman Botanikal, Ayer Keroh</span></div>
+        <span class="badge-free">FREE ADMISSION</span>
+        <div class="info-row" style="margin-top:8px"><span class="lbl">Duration</span><span class="val">45 min – 1.5 hours</span></div>
+        <ul class="tips-list">
+          <li>Bees safely behind glass — completely safe for children</li>
+          <li><strong>Honey tasting station</strong> is the highlight kids enjoy most</li>
+          <li>Visit before 11am to avoid school groups</li>
+          <li>Combine with Crocodile Park and Heritage Studios — all within 5 min in Ayer Keroh</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Galeri+Lebah+Melaka+Ayer+Keroh" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.malaysia-traveller.com/malacca-bee-gallery.html" target="_blank">Malaysia Traveller</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Bee+Gallery+Galeri+Lebah+Melaka" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-zoo">
+      <div class="attr-head" style="background:#27ae60">
+        <div>
+          <div class="title">Zoo Melaka + Dinosaur Encounter</div>
+          <div class="area">Ayer Keroh — ~5 min from AMES Hotel</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Weekday 10am–5pm | Weekend 9am–6pm</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Ayer Keroh, 75450 Melaka</span></div>
+        <table class="price-table">
+          <tr><th>Ticket (Zoo + Dino)</th><th>Adult</th><th>Child (3–12)</th></tr>
+          <tr><td>Combined (verify foreign rate)</td><td>~RM38+</td><td>~RM31+</td></tr>
+          <tr><td>Dino only (foreigner)</td><td>RM55</td><td>RM35</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">3 – 4 hours (zoo + Dinosaur Encounter)</span></div>
+        <ul class="tips-list">
+          <li><strong>Dinosaur Encounter:</strong> 100 life-sized animatronic dinosaurs across a 5-acre forest trail — top highlight for boys</li>
+          <li>Wear closed shoes; zoo grounds are large and partly unpaved</li>
+          <li>Weekend mornings have smaller crowds; avoid Sunday afternoons</li>
+          <li>Verify combined non-Malaysian ticket price at zoomelaka.gov.my or Klook before visiting</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Zoo+Melaka+Ayer+Keroh" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.zoomelaka.gov.my" target="_blank">Official Website</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Zoo+Melaka+Dinosaur+Encounter+review" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-heritage">
+      <div class="attr-head" style="background:#8e44ad">
+        <div>
+          <div class="title">Malaysia Heritage Studios</div>
+          <div class="area">Ayer Keroh — ~3 min from AMES Hotel</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 10:00am – 6:00pm (last ticket 5pm)</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan MH3, Taman Muzaffar Heights, Ayer Keroh</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child (4–12)</th></tr>
+          <tr><td>Non-Malaysian</td><td>RM71</td><td>RM55</td></tr>
+          <tr><td>Malaysian</td><td>RM49</td><td>RM39</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1.5 – 3 hours</span></div>
+        <ul class="tips-list">
+          <li>13 themed zones; <strong>Children's Corner</strong> has interactive games, storytelling and crafts</li>
+          <li><span class="badge-warn">Pre-book via Ticket2U — can sell out on weekends. No cancellation.</span></li>
+          <li>Semi-outdoor — visit mornings or afternoons when shaded; avoid midday heat</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Malaysia+Heritage+Studios+Ayer+Keroh+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.malaysiaheritagestudios.com/visit/" target="_blank">Official Website</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Malaysia+Heritage+Studios+Melaka+review" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-crazy-racing">
+      <div class="attr-head" style="background:#e74c3c">
+        <div>
+          <div class="title">Crazy Racing Melaka (Go-Kart)</div>
+          <div class="area">Klebang — ~15 min from Birkin Hotel</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 11:00am – 1:00am (365 days)</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">PT434, Pekan Klebang Seksyen 2, Klebang Besar</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Price</th></tr>
+          <tr><td>~RM40/person</td><td>10 min per session</td></div></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1 – 2 hours</span></div>
+        <ul class="tips-list">
+          <li>Next to MoCity Cosmic Park — plan both on the same evening</li>
+          <li>11yr old should drive solo; <strong>check height/age requirements for 8yr old</strong> on-site (min ~140–145cm for solo driving)</li>
+          <li>Atmospheric under lights at night — ideal post-dinner activity</li>
+          <li>Bring cash; card machines may not be available</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Crazy+Racing+Melaka+Klebang" target="_blank">Google Maps</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Crazy+Racing+Melaka+go+kart" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-submarine">
+      <div class="attr-head" style="background:#2980b9">
+        <div>
+          <div class="title">KD Rahmat Submarine Museum</div>
+          <div class="area">Klebang — ~20 min from Birkin Hotel</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Mon–Thu: 9am–5pm | Fri–Sun: 9am–6:30pm</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Klebang Besar, Klebang, Melaka</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child (7–12)</th></tr>
+          <tr><td>Non-Malaysian</td><td>RM20</td><td>RM10</td></tr>
+          <tr><td>Under 6</td><td colspan="2">FREE</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1 – 1.5 hours</span></div>
+        <ul class="tips-list">
+          <li>Real Agosta-70 French submarine — walk through torpedo room, engine room, crew mess and quarters</li>
+          <li>If visiting on Day 3 (Tue 16 Jun): arrive by 4pm (closes 5pm Mon–Thu)</li>
+          <li>Cash-only entry — bring small notes</li>
+          <li>Combine with MoCity Cosmic Park &amp; Crazy Racing (all Klebang area)</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=KD+Rahmat+Submarine+Museum+Klebang+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.malaysia-traveller.com/melaka-submarine-museum.html" target="_blank">Malaysia Traveller</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=KD+Rahmat+submarine+museum+Melaka" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-mocity">
+      <div class="attr-head" style="background:#16a085">
+        <div>
+          <div class="title">MoCity Cosmic Park</div>
+          <div class="area">Klebang — adjacent to Crazy Racing</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Indoor: 11am–12:30am | Outdoor rides: 6pm–12:30am</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">PT435, Pekan Klebang Seksyen 2, Klebang Besar</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child</th></tr>
+          <tr><td>Indoor admission</td><td>RM68</td><td>RM38</td></tr>
+          <tr><td>Guardian (child escort)</td><td>RM20</td><td>—</td></tr>
+          <tr><td>Outdoor rides</td><td colspan="2">RM10/ride (bundle discounts available)</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">2 – 4 hours (evening)</span></div>
+        <ul class="tips-list">
+          <li>Neon-lit carnival park — best experienced at night when full outdoor carnival is running (from 7pm)</li>
+          <li>Indoor: climbing, arcade, bumper cars, trampolines, pirate ship</li>
+          <li>Bundle rides: buy 10 get 2 free; buy 20 get 5 free</li>
+          <li>Budget RM80–120 per child for a good evening</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=MoCity+Cosmic+Park+Klebang+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://ecentral.my/mocity-cosmic-park-melaka/" target="_blank">eCentral Review</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=MoCity+Cosmic+Park+Melaka" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-army-museum">
+      <div class="attr-head" style="background:#2c3e50">
+        <div>
+          <div class="title">Army Museum Port Dickson</div>
+          <div class="area">Muzium Tentera Darat — ~10 min from Lexis Hibiscus</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Wed–Sun: 10:00am – 5:00pm</span></div>
+        <span class="badge-warn">CLOSED Monday &amp; Tuesday</span>
+        <div class="info-row" style="margin-top:8px"><span class="lbl">Location</span><span class="val">Kem Sri Rusa, 71050 Port Dickson, NS</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child (7–12)</th></tr>
+          <tr><td>Foreigner</td><td>RM5</td><td>RM2</td></div></tr>
+          <tr><td>Under 6</td><td colspan="2">FREE</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1.5 – 2.5 hours</span></div>
+        <ul class="tips-list">
+          <li>Outdoor exhibits: steam locomotives, aircraft, helicopters, armoured vehicles, field guns</li>
+          <li><strong>Mock underground communist tunnel network</strong> from Malaysia's Emergency period — unique and fascinating</li>
+          <li>Café, souvenir shop, mini rope bridge trail on-site</li>
+          <li>Fees introduced Jan 2025 — very affordable, still great value</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Muzium+Tentera+Darat+Port+Dickson" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.malaysia-traveller.com/port-dickson-army-museum.html" target="_blank">Malaysia Traveller</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Army+Museum+Port+Dickson+Malaysia" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-pd-zoo">
+      <div class="attr-head" style="background:#27ae60">
+        <div>
+          <div class="title">Port Dickson Mini Zoo</div>
+          <div class="area">~15 min from Lexis Hibiscus</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 9:00am – 7:00pm</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Lot 3636, Batu 9, Jalan Pantai, Kg Sungai Menyala, PD</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child (3–12)</th></tr>
+          <tr><td>Foreigner</td><td>RM40</td><td>RM30</td></tr>
+          <tr><td>Under 3</td><td colspan="2">FREE</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1.5 – 2.5 hours</span></div>
+        <ul class="tips-list">
+          <li>Opened June 2025 — brand new, positive reviews. Feed &amp; pet: alpacas, goats, rabbits, raccoons, capybaras, ostriches</li>
+          <li>Horse riding and mini tank rides available on-site</li>
+          <li>Visit 9–11am before midday heat; fully outdoors — bring sunscreen</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Port+Dickson+Mini+Zoo+Jalan+Pantai" target="_blank">Google Maps</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Port+Dickson+Mini+Zoo+2025" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-haunted">
+      <div class="attr-head" style="background:#7d3c98">
+        <div>
+          <div class="title">Funny Haunted Adventure</div>
+          <div class="area">Port Dickson — ~10 min from Lexis Hibiscus</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Afternoons/Evenings — verify by calling ahead</span></div>
+        <span class="badge-warn">CALL AHEAD — past closures reported</span>
+        <div class="info-row" style="margin-top:8px"><span class="lbl">Location</span><span class="val">Lorong Anika 1, Port Dickson, 71050 NS</span></div>
+        <table class="price-table">
+          <tr><th>Ticket (estimate)</th><th>Price</th></tr>
+          <tr><td>Package (haunted + 3D gallery)</td><td>~RM15–25/person</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">Under 1 hour</span></div>
+        <ul class="tips-list">
+          <li>Two halves: haunted house section + 3D art photo gallery</li>
+          <li>8yr old may find the haunted section intense — decide on the day; the 3D gallery is perfectly fine</li>
+          <li>Best as a late-afternoon filler before dinner, not a main attraction</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Funny+Haunted+Adventure+Port+Dickson" target="_blank">Google Maps</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Funny+Haunted+Adventure+Port+Dickson" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-jonker">
+      <div class="attr-head" style="background:#d35400">
+        <div>
+          <div class="title">Jonker Street (Jonker Walk)</div>
+          <div class="area">Melaka City Centre — Jalan Hang Jebat</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Shops: Daily 10am+ | Night Market: Fri–Sun 6pm–midnight</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Hang Jebat, 75200 Melaka — ~5–10 min walk from Birkin Hotel</span></div>
+        <span class="badge-free">FREE to walk</span>
+        <div class="info-row" style="margin-top:8px"><span class="lbl">Duration</span><span class="val">2–4 hours (evening)</span></div>
+        <ul class="tips-list">
+          <li><strong>Night market</strong> only on Fri/Sat/Sun — street pedestrianised from 6pm</li>
+          <li>Arrive 6–6:30pm for best stall selection before sellouts; packed shoulder-to-shoulder by 8pm</li>
+          <li>Must eat: chicken rice ball (Hoe Kee), cendol (Jonker 88), Capitol Satay Celup, coconut ice cream, quail eggs</li>
+          <li>Mamee Jonker House: kids DIY noodle cup activity — small fee</li>
+          <li>Park at Mahkota Parade or Dataran Pahlawan on weekends; weekday parking easier</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=Jonker+Street+Jalan+Hang+Jebat+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.traveloka.com/en-sg/explore/destination/jonker-street-night-market-ta/1002108" target="_blank">Traveloka Guide</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Jonker+Street+night+market+Melaka" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+    <div class="attr-card" id="card-oceanarium">
+      <div class="attr-head" style="background:#1a6fa8">
+        <div>
+          <div class="title">The Shore Oceanarium</div>
+          <div class="area">Melaka City Centre — The Shore Shopping Gallery</div>
+        </div>
+      </div>
+      <div class="attr-body">
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 10:30am – 7:00pm (last entry 6:30pm)</span></div>
+        <div class="info-row"><span class="lbl">Location</span><span class="val">Level 2, The Shore Shopping Gallery, Jalan Persisiran Bunga Raya, Melaka</span></div>
+        <table class="price-table">
+          <tr><th>Ticket</th><th>Adult</th><th>Child (3–12)</th></tr>
+          <tr><td>Standard</td><td>RM40</td><td>RM30</td></tr>
+          <tr><td>Feeding Frenzy add-on</td><td colspan="2">+RM10/person</td></tr>
+        </table>
+        <div class="info-row"><span class="lbl">Duration</span><span class="val">1.5 – 2.5 hours</span></div>
+        <ul class="tips-list">
+          <li><strong>Touch pool</strong>: handle sea cucumbers, bamboo sharks</li>
+          <li><strong>Turtle pool (Kampung Penyu)</strong>: feed turtles with raw fish (purchased separately)</li>
+          <li>Kids quiz trail throughout — redeem souvenir at end</li>
+          <li>Free parking in The Shore mall; combine with riverside lunch</li>
+        </ul>
+      </div>
+      <div class="attr-links">
+        <a class="alink alink-maps" href="https://maps.google.com/maps?q=The+Shore+Oceanarium+Melaka" target="_blank">Google Maps</a>
+        <a class="alink alink-web" href="https://www.malaysia-traveller.com/shore-oceanarium.html" target="_blank">Malaysia Traveller</a>
+        <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=The+Shore+Oceanarium+Melaka+review" target="_blank">YouTube Videos</a>
+      </div>
+    </div>
+
+  </div><!-- /attr-grid -->
+
+  <!-- BONUS ATTRACTIONS -->
+  <div style="margin-top:24px">
+    <div style="font-size:16px;font-weight:700;color:#7d3c98;margin-bottom:12px">Bonus Attractions (If Time Allows)</div>
+    <div class="attr-grid">
+      <div class="attr-card" id="card-wonderland">
+        <div class="attr-head" style="background:#1e8449">
+          <div><div class="title">Melaka Wonderland Water Theme Park</div><div class="area">Ayer Keroh</div></div>
+        </div>
+        <div class="attr-body">
+          <div class="info-row"><span class="lbl">Hours</span><span class="val">Tue–Sun 10am–6pm (closed Mon, open PH)</span></div>
+          <table class="price-table">
+            <tr><th>Ticket</th><th>Adult</th><th>Child</th></tr>
+            <tr><td>Weekday (Malaysian)</td><td>RM36</td><td>RM29</td></tr>
+            <tr><td>Weekend (Malaysian)</td><td>RM40.50</td><td>RM34</td></tr>
+          </table>
+          <div class="info-row"><span class="lbl">Duration</span><span class="val">3–5 hours</span></div>
+          <ul class="tips-list"><li>16 attractions inc. Tornado Chaser (first in Malaysia), Big Wave Pool</li><li>Bring own towels + water shoes; foreign visitor rates may differ — check website</li></ul>
+        </div>
+        <div class="attr-links">
+          <a class="alink alink-maps" href="https://maps.google.com/maps?q=Melaka+Wonderland+Water+Theme+Park+Ayer+Keroh" target="_blank">Google Maps</a>
+          <a class="alink alink-web" href="https://www.melakawonderland.com.my" target="_blank">Official Website</a>
+          <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Melaka+Wonderland+water+theme+park" target="_blank">YouTube Videos</a>
+        </div>
+      </div>
+      <div class="attr-card" id="card-skytrex">
+        <div class="attr-head" style="background:#27ae60">
+          <div><div class="title">Skytrex Adventure Melaka</div><div class="area">Near Zoo Melaka, Ayer Keroh</div></div>
+        </div>
+        <div class="attr-body">
+          <div class="info-row"><span class="lbl">Suitable for</span><span class="val">Ages 7+ (both boys eligible)</span></div>
+          <div class="info-row"><span class="lbl">Price</span><span class="val">From ~RM60/person — check skytrex.com.my</span></div>
+          <div class="info-row"><span class="lbl">Duration</span><span class="val">2–3 hours</span></div>
+          <ul class="tips-list"><li>Tree-to-tree aerial obstacle course with multiple difficulty levels including beginners' trail</li></ul>
+        </div>
+        <div class="attr-links">
+          <a class="alink alink-maps" href="https://maps.google.com/maps?q=Skytrex+Adventure+Melaka+Ayer+Keroh" target="_blank">Google Maps</a>
+          <a class="alink alink-web" href="https://www.skytrex.com.my" target="_blank">Official Website</a>
+          <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=Skytrex+Adventure+Melaka" target="_blank">YouTube Videos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOD GUIDE ═══ -->
+<div class="section" id="food">
+  <div class="section-title">Food Guide by Area</div>
+  <div style="background:#e8f4fd;border-left:4px solid #1a6fa8;padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;margin-bottom:18px;">
+    <strong>Family preference: Chinese cuisine.</strong> All primary recommendations below are Chinese or Nyonya/Peranakan (Chinese-influenced). Melaka has an exceptional Chinese food heritage — chicken rice ball, char kway teow, satay celup, claypot, and Nyonya cooking are all must-tries.
+  </div>
+
+  <div class="food-area-title">Jonker Street / Melaka City Centre</div>
+  <div class="food-grid">
+    <div class="food-card" id="food-hoe-kee">
+      <div class="fname">Hoe Kee Chicken Rice Ball</div>
+      <div class="fmeta">4–8 Jalan Hang Jebat (Jonker St) | 9:30am – ~4:30pm daily</div>
+      <div class="fmust">Must try: <span>Hainanese chicken rice balls, poached chicken with ginger sauce</span></div>
+      <div class="fprice">RM12–20/person | LUNCH ONLY</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Hoe+Kee+Chicken+Rice+Ball+Jonker+Street+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-jonker88">
+      <div class="fname">Jonker 88 (Cendol &amp; Nyonya Laksa)</div>
+      <div class="fmeta">88 Jalan Hang Jebat | Daily</div>
+      <div class="fmust">Must try: <span>Signature cendol with thick gula Melaka, Nyonya laksa (RM5–12)</span></div>
+      <div class="fprice">RM5–12/person</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Jonker+88+Melaka+cendol" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-satay-celup">
+      <div class="fname">Capitol Satay Celup</div>
+      <div class="fmeta">Kota Syahbandar area | Opens 4pm daily (till late)</div>
+      <div class="fmust">Must try: <span>Skewered items in boiling peanut sauce — fish tofu, sausage, meatballs, tofu puff, veg</span></div>
+      <div class="fprice">RM15–30/person (sticks from RM1 each) | Arrive early — waits hit 1hr+ by 7pm weekends</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Capitol+Satay+Celup+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-old-china">
+      <div class="fname">Old China Café (Nyonya Heritage Dining)</div>
+      <div class="fmeta">No. 3 Jalan Hang Kasturi, Melaka City | Daily 11:30am–3pm, 6pm–10pm</div>
+      <div class="fmust">Must try: <span>Nyonya assam fish, beef rendang, perut ikan, laksa Melaka, crispy spring rolls — set in a beautifully restored 1930s guild house</span></div>
+      <div class="fprice">RM25–40/person | Book dinner in advance on weekends</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Old+China+Cafe+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-nancys">
+      <div class="fname">Nancy's Kitchen (Nyonya/Peranakan)</div>
+      <div class="fmeta">Taman Kota Laksamana area | Daily 10am–5pm</div>
+      <div class="fmust">Must try: <span>Sambal prawns with bitter beans, ayam buah keluak, crispy pai tee</span></div>
+      <div class="fprice">RM20–35/person | Book ahead on weekends</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Nancy%27s+Kitchen+Melaka+Nyonya" target="_blank">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="food-area-title">Ayer Keroh Area (Near AMES / Estadia Hotels)</div>
+  <div class="food-grid">
+    <div class="food-card" id="food-mydin">
+      <div class="fname">Mydin MITC Food Court</div>
+      <div class="fmeta">No. 12 Jalan Komersial, MITC | Daily until 11pm</div>
+      <div class="fmust">Must try: <span>Nasi lemak, char kway teow, roti canai, laksa — huge hawker variety</span></div>
+      <div class="fprice">RM5–12/person | Most convenient for dinner near hotels</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Mydin+MITC+Ayer+Keroh+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-lucky-palace">
+      <div class="fname">Lucky Palace Restaurant</div>
+      <div class="fmeta">Ayer Keroh area</div>
+      <div class="fmust">Must try: <span>Steamed chicken, fresh seafood, Mei Cai rice</span></div>
+      <div class="fprice">RM20–35/person</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Lucky+Palace+Restaurant+Ayer+Keroh+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-seri-chendana">
+      <div class="fname">Seri Chendana Cafe</div>
+      <div class="fmeta">Near Jalan Taman Botanikal, Ayer Keroh</div>
+      <div class="fmust">Must try: <span>Local Malaysian breakfast, café-style Asian mains, tiramisu</span></div>
+      <div class="fprice">RM8–15/person</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Seri+Chendana+Cafe+Ayer+Keroh+Melaka" target="_blank">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="food-area-title">Port Dickson (Near Lexis Hibiscus)</div>
+  <div class="food-grid">
+    <div class="food-card" id="food-weng-yin">
+      <div class="fname">Weng Yin Seafood Village</div>
+      <div class="fmeta">~1.4 miles from Lexis Hibiscus | In business 25+ years</div>
+      <div class="fmust">Must try: <span>Salted egg prawns, steamed fish, bamboo lala clams</span></div>
+      <div class="fprice">RM35–60/person | Best for a proper seafood dinner</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Weng+Yin+Seafood+Village+Port+Dickson" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-pd-seafood">
+      <div class="fname">Chinese Seafood Restaurants — Batu 3–8, Jalan Pantai PD</div>
+      <div class="fmeta">Strip of Chinese seafood eateries along the PD coastal road | Dinner from ~6pm</div>
+      <div class="fmust">Must try: <span>Live flower crabs, steamed prawns, butter milk squid, tofu with minced pork — order fresh from the tank. Look for restaurants with tanks outside the door.</span></div>
+      <div class="fprice">RM30–55/person | Comparable quality to Weng Yin at sometimes lower prices</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Chinese+seafood+restaurant+Jalan+Pantai+Port+Dickson" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-pd-kopitiam">
+      <div class="fname">Chinese Kopitiam Breakfast — PD Town Area</div>
+      <div class="fmeta">PD town, ~10 min drive from Lexis Hibiscus | Opens from 7am</div>
+      <div class="fmust">Must try: <span>Kopi-o, half-boiled eggs with kaya toast, char siew wonton mee, chee cheong fun — classic Chinese kopitiam breakfast</span></div>
+      <div class="fprice">RM6–12/person | Search "kopitiam Port Dickson" on Waze for nearest open one</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=kopitiam+Port+Dickson+town" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" style="border-left-color: var(--teal)" id="food-lexis">
+      <div class="fname" style="color:var(--teal)">Lexis Hibiscus Resort Dining</div>
+      <div class="fmeta">On-site — 3 restaurants</div>
+      <div class="fmust">Must try: <span>Roselle Coffee House (buffet/à la carte), UMI Japanese, Wave Dining (fine dining, lobster)</span></div>
+      <div class="fprice">Mid-range to fine dining | Convenient — no driving needed</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Lexis+Hibiscus+Port+Dickson" target="_blank">Google Maps</a></div>
+    </div>
+  </div>
+
+  <div class="food-area-title">Johor Bahru — Near Sunway Hotel Big Box</div>
+  <div class="food-grid">
+    <div class="food-card" id="food-jiah-xiang">
+      <div class="fname">Jiah Xiang Dim Sum</div>
+      <div class="fmeta">Iskandar Puteri area | Opens 7:00am</div>
+      <div class="fmust">Must try: <span>Big Meat Bao, XLB (xiao long bao), Golden Bao — 50 varieties handmade daily</span></div>
+      <div class="fprice">RM15–30/person | Perfect Sunday morning before heading home</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Jiah+Xiang+Dim+Sum+Iskandar+Puteri+Johor" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-bkt-jb">
+      <div class="fname">Bak Kut Teh — JB Old Town / Taman Abad Area</div>
+      <div class="fmeta">JB old town, ~20 min from Sunway Big Box | Opens from 7am, best before noon</div>
+      <div class="fmust">Must try: <span>Hokkien-style Bak Kut Teh (dry and soup versions), you tiao, braised pork trotters — JB BKT is some of the best in Malaysia</span></div>
+      <div class="fprice">RM15–25/person | Worth the detour if arriving JB early on Sunday</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=bak+kut+teh+Johor+Bahru+old+town" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-bobs" style="border-left-color:#8e44ad">
+      <div class="fname" style="color:#8e44ad">Bob's Grill &amp; Bar <span style="font-size:10px;background:#f5eef8;color:#8e44ad;border-radius:3px;padding:1px 6px;font-weight:600;margin-left:4px;">Western treat</span></div>
+      <div class="fmeta">~0.7 miles from Sunway Hotel Big Box, Iskandar Puteri | Rated 4.8/5 on Google</div>
+      <div class="fmust">Must try: <span>Beef tenderloin, garlic bread, croquettes — well-executed Western grill. Great for a special last-night dinner if the family wants a break from Chinese.</span></div>
+      <div class="fprice">RM40–70/person | Book ahead on weekends</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=Bob%27s+Grill+Bar+Iskandar+Puteri+Johor" target="_blank">Google Maps</a></div>
+    </div>
+    <div class="food-card" id="food-ls-seafood">
+      <div class="fname">LS Seafood Restaurant</div>
+      <div class="fmeta">Pusat Komersil Sunway Marketplace | Pork-free</div>
+      <div class="fmust">Must try: <span>Fresh crab, prawns, Cantonese-style fish</span></div>
+      <div class="fprice">RM40–80/person</div>
+      <div class="fmap"><a href="https://maps.google.com/maps?q=LS+Seafood+Restaurant+Sunway+Iskandar+Johor" target="_blank">Google Maps</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DRIVING TIPS ═══ -->
+<div class="section" id="driving">
+  <div class="section-title">Driving Guide for Singaporeans</div>
+
+  <!-- Route overview -->
+  <div style="margin-bottom:18px">
+    <div style="font-weight:700;font-size:14px;margin-bottom:10px;color:#555">Trip Route Overview</div>
+    <div class="route-bar">
+      <span class="route-node">Singapore</span>
+      <span class="route-arrow">→</span>
+      <span class="route-dur">~3h</span>
+      <span class="route-arrow">→</span>
+      <span class="route-node">Melaka</span>
+      <span class="route-arrow">→</span>
+      <span class="route-dur">~1h 10min</span>
+      <span class="route-arrow">→</span>
+      <span class="route-node">Port Dickson</span>
+      <span class="route-arrow">→</span>
+      <span class="route-dur">~1h 10min</span>
+      <span class="route-arrow">→</span>
+      <span class="route-node">Melaka</span>
+      <span class="route-arrow">→</span>
+      <span class="route-dur">~2h</span>
+      <span class="route-arrow">→</span>
+      <span class="route-node">JB</span>
+      <span class="route-arrow">→</span>
+      <span class="route-dur">~30–90min</span>
+      <span class="route-arrow">→</span>
+      <span class="route-node">Singapore</span>
+    </div>
+    <div style="font-size:11px;color:#888">Total driving ~10–11 hours across 9 days. Toll estimate SG↔Melaka (return): ~RM55–65. Use PLUS highway throughout.</div>
+  </div>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h4>VEP (Vehicle Entry Permit) — URGENT</h4>
+      <ol>
+        <li><strong>Mandatory from 1 Jul 2025</strong> for all Singapore-registered cars entering Malaysia by land</li>
+        <li>Apply at <strong>vep.jpj.gov.my</strong> — processing 5–14 business days</li>
+        <li>Collect physical RFID tag and stick to headlamp as instructed</li>
+        <li>Link RFID to your <strong>Touch 'n Go (TNG) eWallet</strong> — RM20 road charge auto-deducted on entry</li>
+        <li>Failure = <strong>RM300 fine</strong> at border. Apply TODAY — trip is in 11 days.</li>
+      </ol>
+    </div>
+    <div class="tip-card">
+      <h4>Touch 'n Go eWallet Setup</h4>
+      <ol>
+        <li>Download TNG eWallet (iOS/Android) and register</li>
+        <li>Top up <strong>minimum RM200</strong> for the trip (RM20 road entry + ~RM55 tolls return + parking)</li>
+        <li>Link your VEP-RFID tag to the wallet</li>
+        <li>TNG eWallet also handles most car park payments in Malaysia</li>
+        <li>PLUS highway toll booths accept TNG card/eWallet — keep in reach</li>
+      </ol>
+    </div>
+    <div class="tip-card">
+      <h4>Petrol Rules</h4>
+      <ol>
+        <li><strong>Singapore law:</strong> must have at least ¾ tank when exiting Singapore (enforced since 1991)</li>
+        <li>Fill up at a Singapore petrol station before crossing</li>
+        <li>In Malaysia: <strong>Singaporeans must pump RON97</strong> (unsubsidised) — NOT RON95</li>
+        <li>RON97 is still significantly cheaper than Singapore petrol — fill up whenever convenient</li>
+        <li>Petronas, Shell, BHPetrol widely available on PLUS highway</li>
+      </ol>
+    </div>
+    <div class="tip-card">
+      <h4>Border Crossing Tips</h4>
+      <ol>
+        <li><strong>Tuas Second Link</strong> is generally faster than Woodlands Causeway on weekends (Sat mornings, Sun evenings)</li>
+        <li>Bring Singapore IC/passport + car insurance documents</li>
+        <li>Check Singapore car insurance covers Malaysia (most comprehensive policies do)</li>
+        <li><strong>Sunday return</strong>: use Tuas 2nd Link. Woodlands peak: 4–9pm Sun — 1.5–2hr queues</li>
+        <li>Leave JB before 12pm or after 9pm on Sunday to avoid worst queues</li>
+      </ol>
+    </div>
+    <div class="tip-card">
+      <h4>Driving in Malaysia</h4>
+      <ol>
+        <li>Speed limits: 110 km/h highway | 90 km/h federal roads | 50 km/h town</li>
+        <li>AES speed cameras common on PLUS — drive at 100–105 km/h to be safe</li>
+        <li>Use <strong>Waze</strong> (best for live traffic + camera alerts in Malaysia)</li>
+        <li>Download offline maps as backup</li>
+        <li><strong>Rest stops:</strong> Ayer Keroh R&amp;R and Machap R&amp;R (clean, toilets, food, petrol)</li>
+      </ol>
+    </div>
+    <div class="tip-card">
+      <h4>Parking Tips</h4>
+      <ol>
+        <li><strong>Jonker Street weekends</strong>: Park at Mahkota Parade or Dataran Pahlawan mall — 5–10 min walk; or use Grab</li>
+        <li><strong>The Shore Oceanarium</strong>: Free parking at The Shore mall</li>
+        <li><strong>Mydin MITC</strong>: Parking RM1</li>
+        <li><strong>Klebang attractions</strong>: Free street parking available near Submarine Museum and MoCity</li>
+        <li>Most major attractions in Ayer Keroh have free or cheap parking lots</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ BUDGET ESTIMATE ═══ -->
+<div class="section" id="budget">
+  <div class="section-title">Budget Estimate (4 Persons — Non-Malaysian Rates)</div>
+  <p style="font-size:12px;color:#666;margin-bottom:12px">Estimates based on non-Malaysian/foreigner ticket prices. Exchange rate: approx. SGD 1 = MYR 3.30. Actual spend will vary — treat as a guide.</p>
+  <table class="budget-table">
+    <tr><th>Category</th><th>Item</th><th>Est. Cost (MYR)</th><th>Est. Cost (SGD)</th></tr>
+    <tr><td>Attractions</td><td>Crocodile Adventure Land (2A + 2C)</td><td>RM82</td><td>~SGD25</td></tr>
+    <tr><td></td><td>Bee Gallery</td><td>FREE</td><td>—</td></tr>
+    <tr><td></td><td>Zoo Melaka + Dinosaur Encounter (verify foreign price)</td><td>~RM138–180</td><td>~SGD42–55</td></tr>
+    <tr><td></td><td>Malaysia Heritage Studios (2A + 2C)</td><td>RM252</td><td>~SGD76</td></tr>
+    <tr><td></td><td>The Shore Oceanarium (2A + 2C)</td><td>RM140</td><td>~SGD42</td></tr>
+    <tr><td></td><td>KD Rahmat Submarine (2A + 2C)</td><td>RM60</td><td>~SGD18</td></tr>
+    <tr><td></td><td>MoCity Cosmic Park + rides budget (4 pax)</td><td>~RM350–450</td><td>~SGD106–136</td></tr>
+    <tr><td></td><td>Crazy Racing — 2 sessions each (4 pax)</td><td>~RM160–200</td><td>~SGD48–61</td></tr>
+    <tr><td></td><td>Army Museum PD (2A + 2C)</td><td>RM14</td><td>~SGD4</td></tr>
+    <tr><td></td><td>PD Mini Zoo (2A + 2C)</td><td>RM140</td><td>~SGD42</td></tr>
+    <tr><td></td><td>Funny Haunted Adventure (4 pax)</td><td>~RM80–100</td><td>~SGD24–30</td></tr>
+    <tr><td></td><td>Melaka Wonderland / Skytrex (optional)</td><td>~RM140–200</td><td>~SGD42–61</td></tr>
+    <tr><td style="font-weight:700">Attractions Total</td><td></td><td style="font-weight:700">~RM1,556–1,778</td><td class="sgd">~SGD472–539</td></tr>
+    <tr><td>Food</td><td>8 nights × avg RM120/day (4 pax — Chinese restaurants &amp; kopitiam mix)</td><td>~RM960</td><td>~SGD291</td></tr>
+    <tr><td>Driving</td><td>Highway tolls (Sg↔Melaka↔PD↔JB↔Sg) + VEP road entry</td><td>~RM130–160</td><td>~SGD39–48</td></tr>
+    <tr><td>Petrol</td><td>~1,200km total trip distance, RON97 ~RM3.50/L at ~12L/100km</td><td>~RM504</td><td>~SGD153</td></tr>
+    <tr><td>Shopping</td><td>Mydin MITC snacks, souvenirs, JB last-stop</td><td>~RM200–400</td><td>~SGD61–121</td></tr>
+    <tr class="total"><td colspan="2">Activities + Food + Driving Sub-total</td><td>~RM3,350–3,800</td><td class="sgd">~SGD1,016–1,152</td></tr>
+    <tr><td>Hotels</td><td>AMES Hotel (2 nts × RM370) — website direct, bkf incl.</td><td>RM 740.00</td><td>~SGD224</td></tr>
+    <tr><td></td><td>Birkin Hotel (1 nt × RM422.35) — Trip.com, no bkf</td><td>RM 422.35</td><td>~SGD128</td></tr>
+    <tr><td></td><td>Lexis Hibiscus PD (2 nts × RM644.15) — Trip.com, bkf incl.</td><td>RM 1,288.30</td><td>~SGD390</td></tr>
+    <tr><td></td><td>Estadia Hotel (2 nts × RM325.95) — Agoda, bkf incl.</td><td>RM 651.90</td><td>~SGD198</td></tr>
+    <tr><td></td><td>Sunway Hotel Big Box (1 nt × RM456.86) — Agoda, bkf incl.</td><td>RM 456.86</td><td>~SGD138</td></tr>
+    <tr><td style="font-weight:700">Hotels Total</td><td style="font-size:11px;color:#666">4 hotels with breakfast · 1 without (Birkin)</td><td style="font-weight:700">RM 3,559.41</td><td class="sgd">~SGD1,079</td></tr>
+    <tr class="total"><td colspan="2">ESTIMATED GRAND TOTAL (incl. hotels)</td><td>~RM6,909–7,359</td><td class="sgd">~SGD2,094–2,230</td></tr>
+  </table>
+  <p style="font-size:11px;color:#888;margin-top:8px">Exchange rate approx. SGD 1 = MYR 3.30. Birkin Hotel has no breakfast — budget an extra RM60–80 for that morning. Grand total is for the entire 9-day trip for 4 persons.</p>
+</div>
+
+<!-- ═══ CHECKLIST ═══ -->
+<div class="section" id="checklist">
+  <div class="section-title">Pre-Trip Checklist</div>
+  <div class="checklist-toolbar">
+    <span class="progress-text" id="checklist-progress">0 / 14 done</span>
+    <button class="btn-reset" id="btn-reset-checklist">Reset All</button>
+  </div>
+  <div class="check-grid">
+    <div class="check-item urgent-check">
+      <input type="checkbox" class="check-input" id="chk-vep">
+      <label for="chk-vep" class="check-text"><strong>Apply for VEP (URGENT — do this today!)</strong><span>vep.jpj.gov.my — 5–14 days processing, trip in 11 days</span></label>
+    </div>
+    <div class="check-item urgent-check">
+      <input type="checkbox" class="check-input" id="chk-tng">
+      <label for="chk-tng" class="check-text"><strong>Set up &amp; top up TNG eWallet (URGENT)</strong><span>Min. RM200 for road entry + tolls + parking</span></label>
+    </div>
+    <div class="check-item urgent-check">
+      <input type="checkbox" class="check-input" id="chk-mhs">
+      <label for="chk-mhs" class="check-text"><strong>Pre-book Malaysia Heritage Studios</strong><span>Via Ticket2U — can sell out weekends (Day 2 is Sunday)</span></label>
+    </div>
+    <div class="check-item urgent-check">
+      <input type="checkbox" class="check-input" id="chk-haunted">
+      <label for="chk-haunted" class="check-text"><strong>Call Funny Haunted Adventure PD</strong><span>Verify they are currently open — past closures reported</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-insurance">
+      <label for="chk-insurance" class="check-text"><strong>Check car insurance covers Malaysia</strong><span>Most SG comprehensive policies do — verify with insurer</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-waze">
+      <label for="chk-waze" class="check-text"><strong>Download Waze (Malaysia maps offline)</strong><span>Best for live traffic + camera alerts in Malaysia</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-zoo">
+      <label for="chk-zoo" class="check-text"><strong>Check Zoo Melaka non-Malaysian prices</strong><span>Visit zoomelaka.gov.my or search Klook for foreigner rates</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-swimwear">
+      <label for="chk-swimwear" class="check-text"><strong>Pack swimwear + extra clothes</strong><span>For Crocodile Park water playground (Day 1)</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-sunscreen">
+      <label for="chk-sunscreen" class="check-text"><strong>Pack sunscreen + insect repellent</strong><span>PD Mini Zoo, Army Museum, Heritage Studios are outdoors</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-shoes">
+      <label for="chk-shoes" class="check-text"><strong>Pack closed-toe shoes for all kids</strong><span>Required for Zoo Melaka trails and Skytrex (if doing)</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-petrol">
+      <label for="chk-petrol" class="check-text"><strong>Fill car to 3/4 tank before crossing</strong><span>Singapore law — fill at SG petrol station day of departure</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-cash">
+      <label for="chk-cash" class="check-text"><strong>Bring enough MYR cash</strong><span>Submarine Museum + some attractions are cash-only</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-charger">
+      <label for="chk-charger" class="check-text"><strong>Car charger / portable power bank</strong><span>For Waze navigation + phones throughout the day</span></label>
+    </div>
+    <div class="check-item">
+      <input type="checkbox" class="check-input" id="chk-snacks">
+      <label for="chk-snacks" class="check-text"><strong>Snack bag for the car</strong><span>Young kids on long drives — have drinks + snacks ready</span></label>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Family Trip Itinerary · Melaka, Port Dickson &amp; Johor Bahru · 14–22 June 2026
+  &nbsp;|&nbsp; 2 Adults + 2 Boys (11 &amp; 8) driving from Singapore
+  &nbsp;|&nbsp; Report generated June 2026
+</footer>
+
+<!-- ═══ MODAL ═══ -->
+<div id="modal-overlay"></div>
+<div id="modal-sheet">
+  <div class="modal-handle"></div>
+  <div class="modal-close-btn"><button onclick="closeModal()" aria-label="Close">&#x2715;</button></div>
+  <div id="modal-body"></div>
+</div>
+
+<script>
+/* ─── MODAL ─── */
+var overlay = document.getElementById('modal-overlay');
+var sheet   = document.getElementById('modal-sheet');
+var mbody   = document.getElementById('modal-body');
+var touchStartY = 0;
+
+function openModal(targetId) {
+  var src = document.getElementById(targetId);
+  if (!src) return;
+  var clone = src.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.querySelectorAll('.place-link').forEach(function(l){ l.replaceWith(document.createTextNode(l.textContent.replace(' ↗',''))); });
+  mbody.innerHTML = '';
+  mbody.appendChild(clone);
+  overlay.classList.add('active');
+  sheet.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  sheet.scrollTop = 0;
+}
+
+function closeModal() {
+  overlay.classList.remove('active');
+  sheet.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+overlay.addEventListener('click', closeModal);
+sheet.addEventListener('touchstart', function(e){ touchStartY = e.touches[0].clientY; }, {passive:true});
+sheet.addEventListener('touchend', function(e){ if(e.changedTouches[0].clientY - touchStartY > 80) closeModal(); }, {passive:true});
+
+document.addEventListener('click', function(e){
+  var link = e.target.closest('.place-link');
+  if(link && link.dataset.target){ e.preventDefault(); openModal(link.dataset.target); }
+});
+
+/* ─── CHECKLIST ─── */
+(function(){
+  var KEY = 'malacca_checklist_v1';
+
+  function save(){
+    var state = {};
+    document.querySelectorAll('.check-input').forEach(function(cb){
+      state[cb.id] = cb.checked;
+    });
+    localStorage.setItem(KEY, JSON.stringify(state));
+    updateProgress();
+  }
+
+  function load(){
+    var raw = localStorage.getItem(KEY);
+    if(!raw) return;
+    var state = JSON.parse(raw);
+    document.querySelectorAll('.check-input').forEach(function(cb){
+      if(state[cb.id]){
+        cb.checked = true;
+        cb.closest('.check-item').classList.add('done');
+      }
+    });
+    updateProgress();
+  }
+
+  function updateProgress(){
+    var all = document.querySelectorAll('.check-input').length;
+    var done = document.querySelectorAll('.check-input:checked').length;
+    var el = document.getElementById('checklist-progress');
+    if(el) el.textContent = done + ' / ' + all + ' done';
+  }
+
+  function resetAll(){
+    if(!confirm('Reset all checklist items?')) return;
+    document.querySelectorAll('.check-input').forEach(function(cb){
+      cb.checked = false;
+      cb.closest('.check-item').classList.remove('done');
+    });
+    localStorage.removeItem(KEY);
+    updateProgress();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.check-input').forEach(function(cb){
+      cb.addEventListener('change', function(){
+        cb.closest('.check-item').classList.toggle('done', cb.checked);
+        save();
+      });
+    });
+    var btn = document.getElementById('btn-reset-checklist');
+    if(btn) btn.addEventListener('click', resetAll);
+    load();
+  });
+})();
+</script>
+</body>
+</html>

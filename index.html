@@ -241,6 +241,19 @@
   .food-card .fmap a { font-size: 11px; font-weight: 700; color: #1575A8; background: #e0f0fa; border: 1px solid #b3d4f0; padding: 3px 9px; border-radius: 12px; text-decoration: none; display: inline-block; }
   .food-area-title { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; color: var(--forest); margin: 22px 0 10px; padding-bottom: 5px; border-bottom: 2px solid var(--border); }
 
+  /* ── CARD IMAGES ── */
+  .card-img-wrap { width: 100%; height: 150px; overflow: hidden; }
+  .card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+  .attr-card:hover .card-img { transform: scale(1.04); }
+  .fimg-wrap { width: calc(100% + 28px); height: 100px; overflow: hidden; margin: -13px -14px 10px; }
+  .food-card .fimg-wrap .card-img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ── FOOD REVIEW LINKS ── */
+  .flinks { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; padding-top: 7px; border-top: 1px dashed var(--border); }
+  .flink { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 3px; }
+  .flink-web  { background: #e0f5eb; color: #1a7a40; border: 1px solid #a9dfbf; }
+  .flink-blog { background: #fef3e2; color: #a05c00; border: 1px solid #fcd48a; }
+
   /* ── TIPS ── */
   .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
   .tip-card { background: var(--card); border-radius: 10px; border: 1px solid var(--border); padding: 14px; box-shadow: var(--shadow); }
@@ -1005,11 +1018,22 @@
     </div>
     <div class="timeline">
       <div class="tl-item">
+        <div class="tl-time">07:30</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-lexis">Lexis Hibiscus</span> (included)</div>
+          <div class="tl-desc">Last breakfast at Lexis Hibiscus — included in your 2-night stay. Roselle Coffee House serves a buffet with local and Western options.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — Roselle Coffee House, resort level</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
         <div class="tl-time">08:00</div>
         <div class="tl-dot c-blue">B</div>
         <div class="tl-content">
           <div class="tl-label">Last Morning at Lexis Hibiscus — Beach Swim</div>
-          <div class="tl-desc">Final dip before checkout. Breakfast at Roselle Coffee House (resort).</div>
+          <div class="tl-desc">Final dip before checkout. Enjoy the beach one last time before the drive back to Melaka.</div>
         </div>
       </div>
       <div class="tl-item">
@@ -1078,6 +1102,17 @@
     </div>
     <div class="timeline">
       <div class="tl-item">
+        <div class="tl-time">07:30</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-estadia">Estadia Hotel</span> (included)</div>
+          <div class="tl-desc">Breakfast is included in your Estadia booking. Enjoy before a big activity day at the water park or Skytrex — you'll want a full stomach.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — no extra cost</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
         <div class="tl-time">10:00</div>
         <div class="tl-dot c-blue">W</div>
         <div class="tl-content">
@@ -1135,6 +1170,17 @@
       <div class="day-hotel-badge">Sunway Hotel Big Box JB</div>
     </div>
     <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-time">07:30</div>
+        <div class="tl-dot c-orange">B</div>
+        <div class="tl-content">
+          <div class="tl-label">Hotel Breakfast — <span class="place-link" data-target="hotel-estadia">Estadia Hotel</span> (included)</div>
+          <div class="tl-desc">Last breakfast at Estadia before checking out. Included in your 2-night stay. Grab a light bite here, then head to Jonker Street before the long drive to JB.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Included — no extra cost</span>
+          </div>
+        </div>
+      </div>
       <div class="tl-item">
         <div class="tl-time">09:00</div>
         <div class="tl-dot c-purple">J</div>
@@ -1198,9 +1244,11 @@
         <div class="tl-time">07:00</div>
         <div class="tl-dot c-orange">B</div>
         <div class="tl-content">
-          <div class="tl-label">Breakfast — <span class="place-link" data-target="food-jiah-xiang">Jiah Xiang Dim Sum</span> (opens 7am)</div>
-          <div class="tl-desc">Handmade dim sum: Big Meat Bao, XLB (xiao long bao), Golden Bao. Nearly 50 varieties. Short drive from hotel. JB dim sum quality is excellent and very affordable.</div>
-          <div class="tl-tags"><span class="tag tag-food">RM15–30/person</span></div>
+          <div class="tl-label">Breakfast — Hotel or <span class="place-link" data-target="food-jiah-xiang">Jiah Xiang Dim Sum</span> outing</div>
+          <div class="tl-desc"><strong>Option A — Hotel breakfast (included):</strong> Sunway Hotel has breakfast included in your booking — convenient and free. <strong>Option B (Recommended) — Jiah Xiang Dim Sum:</strong> Short drive away, opens 7am. Handmade dim sum: Big Meat Bao, XLB (xiao long bao), Golden Bao — nearly 50 varieties. JB dim sum quality is exceptional. Worth the outing on your last morning.</div>
+          <div class="tl-tags">
+            <span class="tag tag-food">Hotel breakfast: Included | Jiah Xiang: RM15–30/person</span>
+          </div>
         </div>
       </div>
       <div class="tl-item">
@@ -1239,6 +1287,7 @@
           <div class="area">Taman Buaya &amp; Rekreasi, Ayer Keroh</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Melaka_Crocodile_Farm.jpg/800px-Melaka_Crocodile_Farm.jpg" alt="Crocodile Adventure Land Melaka" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 9am – 6pm (last entry 5pm); Water playground closed Mon</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan MH3, Taman Muzaffar Heights, Ayer Keroh (~3 min from AMES Hotel)</span></div>
@@ -1268,6 +1317,7 @@
           <div class="area">Ayer Keroh — 2 min from AMES Hotel</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Melaka_Bee_Gallery.jpg/800px-Melaka_Bee_Gallery.jpg" alt="Bee Gallery Melaka" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 9:00am – 5:30pm</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Taman Botanikal, Ayer Keroh</span></div>
@@ -1294,6 +1344,7 @@
           <div class="area">Ayer Keroh — ~5 min from AMES Hotel</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Melaka_Zoo_and_Night_Safari.jpg/800px-Melaka_Zoo_and_Night_Safari.jpg" alt="Zoo Melaka" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Weekday 10am–5pm | Weekend 9am–6pm</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Ayer Keroh, 75450 Melaka</span></div>
@@ -1324,6 +1375,7 @@
           <div class="area">Ayer Keroh — ~3 min from AMES Hotel</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Malaysia_Heritage_Studios_front.jpg/800px-Malaysia_Heritage_Studios_front.jpg" alt="Malaysia Heritage Studios" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Daily 10:00am – 6:00pm (last ticket 5pm)</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan MH3, Taman Muzaffar Heights, Ayer Keroh</span></div>
@@ -1381,6 +1433,7 @@
           <div class="area">Klebang — ~20 min from Birkin Hotel</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Klebang_submarine_museum_starboard.jpg/800px-Klebang_submarine_museum_starboard.jpg" alt="KD Rahmat Submarine Museum Klebang" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Mon–Thu: 9am–5pm | Fri–Sun: 9am–6:30pm</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Klebang Besar, Klebang, Melaka</span></div>
@@ -1442,6 +1495,7 @@
           <div class="area">Muzium Tentera Darat — ~10 min from Lexis Hibiscus</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Muzium_Tentera_Darat_PD_2.jpg/800px-Muzium_Tentera_Darat_PD_2.jpg" alt="Army Museum Port Dickson outdoor exhibits" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Wed–Sun: 10:00am – 5:00pm</span></div>
         <span class="badge-warn">CLOSED Monday &amp; Tuesday</span>
@@ -1529,6 +1583,7 @@
           <div class="area">Melaka City Centre — Jalan Hang Jebat</div>
         </div>
       </div>
+      <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Jonker_Walk_April_2022.jpg/800px-Jonker_Walk_April_2022.jpg" alt="Jonker Walk Melaka" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
       <div class="attr-body">
         <div class="info-row"><span class="lbl">Hours</span><span class="val">Shops: Daily 10am+ | Night Market: Fri–Sun 6pm–midnight</span></div>
         <div class="info-row"><span class="lbl">Location</span><span class="val">Jalan Hang Jebat, 75200 Melaka — ~5–10 min walk from Birkin Hotel</span></div>
@@ -1574,8 +1629,9 @@
       </div>
       <div class="attr-links">
         <a class="alink alink-maps" href="https://maps.google.com/maps?q=The+Shore+Oceanarium+Melaka" target="_blank">Google Maps</a>
-        <a class="alink alink-web" href="https://www.malaysia-traveller.com/shore-oceanarium.html" target="_blank">Malaysia Traveller</a>
+        <a class="alink alink-web" href="https://www.oceanariummelaka.com/" target="_blank">Official Website</a>
         <a class="alink alink-yt" href="https://www.youtube.com/results?search_query=The+Shore+Oceanarium+Melaka+review" target="_blank">YouTube Videos</a>
+        <a class="alink alink-web" href="https://sgmytrips.com/the-shore-oceanarium/" target="_blank">Blog Review</a>
       </div>
     </div>
 
@@ -1589,6 +1645,7 @@
         <div class="attr-head" style="background:#1e8449">
           <div><div class="title">Melaka Wonderland Water Theme Park</div><div class="area">Ayer Keroh</div></div>
         </div>
+        <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Melaka_Wonderland.jpg/800px-Melaka_Wonderland.jpg" alt="Melaka Wonderland Water Theme Park" class="card-img" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
         <div class="attr-body">
           <div class="info-row"><span class="lbl">Hours</span><span class="val">Tue–Sun 10am–6pm (closed Mon, open PH)</span></div>
           <table class="price-table">
@@ -1640,6 +1697,10 @@
       <div class="fmust">Must try: <span>Hainanese chicken rice balls, poached chicken with ginger sauce</span></div>
       <div class="fprice">RM12–20/person | LUNCH ONLY</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Hoe+Kee+Chicken+Rice+Ball+Jonker+Street+Melaka" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.tripadvisor.com.sg/Restaurant_Review-g306997-d1156550-Reviews-Hoe_Kee_Chicken_Rice_Ball-Melaka_Central_Melaka_District_Melaka_State.html" target="_blank" class="flink flink-blog">TripAdvisor Reviews ↗</a>
+      <a href="https://www.2bearbear.com/battle-of-the-malacca-melaka-jonker-street-chicken-rice-balls-which-is-better-chung-wah-chicken-rice-or-hoe-kee-chicken-rice/" target="_blank" class="flink flink-blog">Blog Comparison Review ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-jonker88">
       <div class="fname">Jonker 88 (Cendol &amp; Nyonya Laksa)</div>
@@ -1647,6 +1708,10 @@
       <div class="fmust">Must try: <span>Signature cendol with thick gula Melaka, Nyonya laksa (RM5–12)</span></div>
       <div class="fprice">RM5–12/person</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Jonker+88+Melaka+cendol" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.gomelaka.my/jonker-88/" target="_blank" class="flink flink-blog">goMelaka Review ↗</a>
+      <a href="https://www.malaymail.com/news/eat-drink/2022/09/08/in-melakas-tourist-packed-jonker-street-jonker88-still-draws-the-crowds-with-their-peranakan-cendol-and-laksa/27132" target="_blank" class="flink flink-blog">Malay Mail Feature ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-satay-celup">
       <div class="fname">Capitol Satay Celup</div>
@@ -1654,6 +1719,10 @@
       <div class="fmust">Must try: <span>Skewered items in boiling peanut sauce — fish tofu, sausage, meatballs, tofu puff, veg</span></div>
       <div class="fprice">RM15–30/person (sticks from RM1 each) | Arrive early — waits hit 1hr+ by 7pm weekends</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Capitol+Satay+Celup+Melaka" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.taufulou.com/famous-satay-celup-capitol-satay-melaka/" target="_blank" class="flink flink-blog">TauFuLou Blog Review ↗</a>
+      <a href="https://erisgoesto.com/2020/01/03/review-capitol-satay-melakas-original-satay-celup/" target="_blank" class="flink flink-blog">ErisGoesTo Review ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-old-china">
       <div class="fname">Old China Café (Nyonya Heritage Dining)</div>
@@ -1661,6 +1730,9 @@
       <div class="fmust">Must try: <span>Nyonya assam fish, beef rendang, perut ikan, laksa Melaka, crispy spring rolls — set in a beautifully restored 1930s guild house</span></div>
       <div class="fprice">RM25–40/person | Book dinner in advance on weekends</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Old+China+Cafe+Melaka" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.tripadvisor.com/Restaurant_Review-g306997-d2093340-Reviews-Old_China_Cafe_Melaka-Melaka_Central_Melaka_District_Melaka_State.html" target="_blank" class="flink flink-blog">TripAdvisor Reviews ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-nancys">
       <div class="fname">Nancy's Kitchen (Nyonya/Peranakan)</div>
@@ -1668,6 +1740,10 @@
       <div class="fmust">Must try: <span>Sambal prawns with bitter beans, ayam buah keluak, crispy pai tee</span></div>
       <div class="fprice">RM20–35/person | Book ahead on weekends</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Nancy%27s+Kitchen+Melaka+Nyonya" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://eatatnancyskit.com/" target="_blank" class="flink flink-web">Nancy's Kitchen Official ↗</a>
+      <a href="https://therantingpanda.com/2019/05/25/food-review-nancys-kitchen-restaurant-in-melaka-malaysia-one-of-the-most-popular-peranakan-restaurant-in-the-city/" target="_blank" class="flink flink-blog">The Ranting Panda Review ↗</a>
+    </div>
     </div>
   </div>
 
@@ -1686,6 +1762,10 @@
       <div class="fmust">Must try: <span>Steamed chicken, fresh seafood, Mei Cai rice</span></div>
       <div class="fprice">RM20–35/person</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Lucky+Palace+Restaurant+Ayer+Keroh+Melaka" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.luckypalacemelaka.com/" target="_blank" class="flink flink-web">Lucky Palace Official ↗</a>
+      <a href="https://www.tripadvisor.com/Restaurant_Review-g1062560-d11947700-Reviews-Lucky_Palace_Restaurant_Melaka_Sdn_Bhd-Ayer_Keroh_Central_Melaka_District_Melak.html" target="_blank" class="flink flink-blog">TripAdvisor Reviews ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-seri-chendana">
       <div class="fname">Seri Chendana Cafe</div>
@@ -1704,6 +1784,10 @@
       <div class="fmust">Must try: <span>Salted egg prawns, steamed fish, bamboo lala clams</span></div>
       <div class="fprice">RM35–60/person | Best for a proper seafood dinner</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Weng+Yin+Seafood+Village+Port+Dickson" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.wengyinseafood.com/" target="_blank" class="flink flink-web">Official Website ↗</a>
+      <a href="https://www.choiyen.com/weng-yin-seafood-village-port-dickson-2/" target="_blank" class="flink flink-blog">Mimi's Dining Room Review ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-pd-seafood">
       <div class="fname">Chinese Seafood Restaurants — Batu 3–8, Jalan Pantai PD</div>
@@ -1725,6 +1809,9 @@
       <div class="fmust">Must try: <span>Roselle Coffee House (buffet/à la carte), UMI Japanese, Wave Dining (fine dining, lobster)</span></div>
       <div class="fprice">Mid-range to fine dining | Convenient — no driving needed</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Lexis+Hibiscus+Port+Dickson" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.lexishibiscuspd.com/dining/" target="_blank" class="flink flink-web">Resort Dining Page ↗</a>
+    </div>
     </div>
   </div>
 
@@ -1736,6 +1823,10 @@
       <div class="fmust">Must try: <span>Big Meat Bao, XLB (xiao long bao), Golden Bao — 50 varieties handmade daily</span></div>
       <div class="fprice">RM15–30/person | Perfect Sunday morning before heading home</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Jiah+Xiang+Dim+Sum+Iskandar+Puteri+Johor" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://jiahxiangdimsum.com/en/" target="_blank" class="flink flink-web">Jiah Xiang Official ↗</a>
+      <a href="https://sethlui.com/jiah-xiang-dim-sum-jb-malaysia-may-2024/" target="_blank" class="flink flink-blog">SETHLUI.com Review 2024 ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-bkt-jb">
       <div class="fname">Bak Kut Teh — JB Old Town / Taman Abad Area</div>
@@ -1750,6 +1841,10 @@
       <div class="fmust">Must try: <span>Beef tenderloin, garlic bread, croquettes — well-executed Western grill. Great for a special last-night dinner if the family wants a break from Chinese.</span></div>
       <div class="fprice">RM40–70/person | Book ahead on weekends</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=Bob%27s+Grill+Bar+Iskandar+Puteri+Johor" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://www.bobsgrillandbar.com.my/" target="_blank" class="flink flink-web">Bob's Grill Official ↗</a>
+      <a href="https://www.tripadvisor.com.sg/Restaurant_Review-g14149941-d25334554-Reviews-Bob_s_Grill_Bar-Iskandar_Puteri_Johor_Bahru_District_Johor.html" target="_blank" class="flink flink-blog">TripAdvisor Reviews ↗</a>
+    </div>
     </div>
     <div class="food-card" id="food-ls-seafood">
       <div class="fname">LS Seafood Restaurant</div>
@@ -1757,6 +1852,9 @@
       <div class="fmust">Must try: <span>Fresh crab, prawns, Cantonese-style fish</span></div>
       <div class="fprice">RM40–80/person</div>
       <div class="fmap"><a href="https://maps.google.com/maps?q=LS+Seafood+Restaurant+Sunway+Iskandar+Johor" target="_blank">Google Maps</a></div>
+    <div class="flinks">
+      <a href="https://loonsing.com.my/home/index.php/ls-seafood-sunway-iskandar-jb/" target="_blank" class="flink flink-web">LS Seafood Website ↗</a>
+    </div>
     </div>
   </div>
 </div>
